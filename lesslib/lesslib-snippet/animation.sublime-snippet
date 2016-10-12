@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.animation(${1:});
+]]></content>
+	<tabTrigger>le-animation</tabTrigger>
+	<scope>source.less</scope>
+	<description>动画</description>
+</snippet>

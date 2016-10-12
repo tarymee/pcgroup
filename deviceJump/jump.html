@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312"/>
+<title>太平洋家居网设备跳转</title>
+<style>
+html,body{margin:0px;background-color:#fff;width:100%;height:100%;}
+.deviceJump{display:none;width:100%;height:100%;z-index:99999;position:relative;}
+.deviceJump-con{width:80%;position:absolute;margin:auto;left:0;bottom:0;right:0;top:0;height:480px;}
+@media only screen and (orientation : landscape){
+	.deviceJump-con{
+		-webkit-transform:scale(0.6,0.6);
+		-moz-transform:scale(0.6,0.6);
+		-ms-transform:scale(0.6,0.6);
+		-o-transform:scale(0.6,0.6);
+		transform:scale(0.6,0.6);
+	}
+}
+.deviceJump-th{height:100px;width:100%;overflow:hidden;margin-top:20px;}
+.deviceJump-th-logo{width:300px;border:none;height:100px;float:left;margin-right:20px;background-image:url(http://www1.pchouse.com.cn/wap/20150929/img/logo.png);-webkit-background-size:300px;-moz-background-size:300px;background-size:300px;}
+.deviceJump-th-tip{color:#aaa;line-height:40px;font-size:32px;margin-top:20px;zoom:1;height:80px;overflow:hidden;}
+.deviceJump-btn{overflow:hidden;}
+.deviceJump-btn a{display:block;height:100px;line-height:100px;margin:20px auto;color:#fff;font-size:40px;cursor:pointer;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;border-radius:10px;overflow:hidden;}
+.deviceJump-btn a:before{display:block;content:"";width:100px;height:100px;float:left;margin-right:20%;border-right:2px solid rgba(100,100,100,0.1);background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAEsBAMAAADHsAvSAAAAMFBMVEX///8BAQECAgIDAwMEBAQFBQUGBgYHBwcICAgJCQkKCgoLCwsMDAwNDQ0ODg4PDw+j3JH3AAAAEHRSTlP///////////////////8A4CNdGQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAilJREFUaN7t2wtuwyAMBmDfwPe/pW/AtjaVgl8YK31s+6upk1A+aCuCbZLQ2H4RCMhriZD3SokriBMilxFaEjZ97JBRJLQ/SuO7fCaxc0oWhEFAQEBAQEBAQEA+IemVbTKVP1UiLxiFR62wapRvnSIRlTgICAgIyPtJlCaY4EdFcYp+dcKGEFWHmUjylQOS/kwu4YzIVWSAgICAgPwz8pr40gh82TASReRGEAfZIfIEYvOxsZ/1vSHp9TdgMiL7ZPwhIv4uV0aiba6YxFtjEZF4Ay4gku3AlQhXPtj+KChFQUBAQJ5Jkrh3URST7ZU/vyrkkdWVJEumw3zjXrFSPXBGxBwhq+tiTp+SX7ATLwKbRop29OJWCooUZTggUWqkuqL1ILovWg+iO6PCIKq3iXBSvXlktaHq7vSqmRINkxBeETOT1Cwp1Mh2Rmsia8KWjIwMS2hNyBDOiVxApEJYk5GT8WuIPVe8Be0/ENUitCSPE5jU/5TQuUVqhE8tVCCPc+neclpCE3IM83g3n9j7ke+H3d7O67Qm52kpx60tPC/f6Uw+bm3hORik5HbkcUcMF8+Xn0O//1QkssQ8XsDTIGa5GN7jBfr5gXQdE1u5e4TChClYYNV64T0KwYtgoQdxgoUTT/S3KwQ+WgW+RniVNLmTaHtwM1XoJCSNtKeRXHVSuEai2ElHG0lvJ7VuJPCdMqFRjHRKnk5h1SnfOvuWrQ3VTsGLXQWQC8kX9839SpJyhj0AAAAASUVORK5CYII=);background-repeat:no-repeat;-webkit-background-size:80px;-moz-background-size:80px;background-size:80px;}
+.deviceJump-btn a:hover{text-decoration:none;color:#fffffe;}
+.deviceJump-btnA{background:#90c31f;}
+.deviceJump-btnA:before{background-position:10px 10px;}
+.deviceJump-btnB{background:#dedede;}
+.deviceJump-btnB:before{background-position:10px -70px;}
+.deviceJump-btnC{background:#dedede;}
+.deviceJump-btnC:before{background-position:10px -150px;}
+</style>
+</head>
+<body>
+<div class="deviceJump" id="JdeviceJump"></div>
+<script type="text/javascript">
+var Cookie = {
+	get: function(check_name) {
+		check_name = encodeURIComponent(check_name);
+		var a_all_cookies = document.cookie.split(';');
+		var a_temp_cookie = '';
+		var cookie_name = '';
+		var cookie_value = '';
+		var b_cookie_found = false;
+		var i = '';
+		var len = a_all_cookies.length;
+		for (i = 0; i < len; i++) {
+			a_temp_cookie = a_all_cookies[i].split('=');
+			cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+			if (cookie_name == check_name) {
+				b_cookie_found = true;
+				if (a_temp_cookie.length > 1) {
+					cookie_value = decodeURIComponent(a_temp_cookie[1].replace(/^\s+|\s+$/g, ''));
+				}
+				return cookie_value;
+				break;
+			}
+			a_temp_cookie = null;
+			cookie_name = '';
+		}
+		if (!b_cookie_found) {
+			return null;
+		}
+	},
+	set: function(name, value, expires, path, domain, secure) {
+		var today = new Date();
+		today.setTime(today.getTime());
+		if (expires) {
+			expires = expires * 1000 * 60 * 60 * 24;
+		}
+		var expires_date = new Date(today.getTime() + (expires));
+		document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) +
+			((expires) ? ";expires=" + expires_date.toGMTString() : "") +
+		((path) ? ";path=" + path : "") +
+			((domain) ? ";domain=" + domain : "") +
+			((secure) ? ";secure" : "");
+	}
+};
+function $$(id) {
+	return (typeof id == "object") ? id : document.getElementById(id);
+}
+
+
+var domain = ".pchouse.com.cn";
+// document.domain = domain.substring(1);
+
+var locSearch = location.search;
+var locHash = location.hash;
+var deviceJumpUrl = {
+	"main":"http://www.pchouse.com.cn/",
+	"wap":"http://m.pchouse.com.cn/w/",
+	"wap_3g":"http://m.pchouse.com.cn/"
+};
+
+
+var fatherWindow = parent.window;
+var fatherIframe = fatherWindow.document.getElementById("JiframeDeviceJump");
+
+function hide() {
+	$$("JdeviceJump").style.display = "none";
+	if (window.top != window.self) {
+		fatherIframe.style.display = "none";
+	}
+}
+function show() {
+	$$("JdeviceJump").style.display = "block";
+	if (window.top != window.self) {
+		fatherIframe.style.display = "block";
+	}
+}
+function jump(url) {
+	window.top.location.href = url;
+}
+
+
+if (window.top != window.self) {
+	// 如果是在父层引用
+	deviceJumpUrl = fatherWindow.deviceJumpUrl;
+	locHash = fatherWindow.location.hash;
+	locSearch = fatherWindow.location.search;
+	if (fatherIframe) {
+		fatherIframe.style.display = "none";
+		fatherIframe.style.width = "100%";
+		fatherIframe.style.height = "100%";
+		fatherIframe.style.border = "none";
+		fatherIframe.style.padding = "0";
+		fatherIframe.style.margin = "0";
+		fatherIframe.style.background = "#fff";
+		fatherIframe.style.position = "fixed";
+		fatherIframe.style.top = "0";
+		fatherIframe.style.left = "0";
+		fatherIframe.style.zIndex = "99999";
+	};
+}else {
+	// 如果是本页面
+}
+
+
+
+
+// 转移fromApp参数
+if (locSearch && locSearch.indexOf("fromApp") > -1) {
+	if (deviceJumpUrl.wap_3g.indexOf("?") != -1) {
+		deviceJumpUrl.wap_3g += "&fromApp";
+	}else {
+		deviceJumpUrl.wap_3g += "?fromApp";
+	};
+};
+
+// 转移ad计数器
+// xxx#ad=1234 可以计数
+// xxx?other#ad=1234 可以计数
+// xxx?ad=1234 可以计数
+// xxx?other&ad=1234 不可以计数
+// xxx#ad=1234?other&other 不可以计数
+// xxx?ad=1234&other 可以计数
+// xxx?ad=1234&other#other 可以计数
+// xxx#ad=1234&other#other 不可以计数
+// ?ad=1234是之前的，有可能会影响SEO， #ad=1234对SEO没影响
+if (locHash || locSearch) {
+	var array = /[\?|#]ad=([^&|^#]*)/i.exec(locSearch + locHash);
+	if (array) {
+		var adNum = array[1];
+		if (deviceJumpUrl.wap_3g.indexOf("?") != -1) {
+			deviceJumpUrl.wap_3g += "#ad=" + adNum;
+		}else if(deviceJumpUrl.wap_3g.indexOf("#") != -1){
+			deviceJumpUrl.wap_3g += "?ad=" + adNum;
+		}else {
+			deviceJumpUrl.wap_3g += "#ad=" + adNum;
+		}
+	}
+}
+
+
+if (Cookie.get("deviceJump")) {
+	if (Cookie.get("deviceJump") == "wap_3g") {
+		hide();
+		jump(deviceJumpUrl.wap_3g);
+	}else {
+		hide();
+		if (window.top == window.self) {
+			jump(deviceJumpUrl.main);
+		}
+	};
+}else {
+	show();
+	var html = '';
+	html += '<div class="deviceJump-con">';
+	html += '<div class="deviceJump-th">';
+	html += '<div class="deviceJump-th-logo"></div>';
+	html += '<div class="deviceJump-th-tip">强烈建议iPhone、安卓智能手机用户访问触屏版，体验更佳。</div>';
+	html += '</div>';
+	html += '<div class="deviceJump-btn">';
+	html += '<a class="deviceJump-btnA" id="JdeviceJumpWap_3g">访问触屏版(建议)</a>';
+	html += '<a class="deviceJump-btnB" id="JdeviceJumpMain">继续访问电脑版</a>';
+	html += '<a class="deviceJump-btnC" id="JdeviceJumpDownload">PChouse移动产品</a>';
+	html += '</div>';
+	html += '</div>';
+	$$("JdeviceJump").innerHTML = html;
+	$$("JdeviceJumpWap_3g").addEventListener("click",function(){
+		Cookie.set("deviceJump", "wap_3g", 30, "/", domain);
+		jump(deviceJumpUrl.wap_3g);
+	},false);
+
+	$$("JdeviceJumpMain").addEventListener("click",function(){
+		Cookie.set("deviceJump", "main", 1, "/", domain);
+		hide();
+		if (window.top == window.self) {
+			jump(deviceJumpUrl.main);
+		}
+	},false);
+
+	$$("JdeviceJumpDownload").addEventListener("click",function(){
+		jump("http://m.pchouse.com.cn/x/appdl/");
+	},false);
+};
+
+document.addEventListener("touchmove",function(e){
+	e.preventDefault()
+},false);
+</script>
+</body>
+</html>

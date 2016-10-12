@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.text-shadow(${1:0} ${2:0} ${3:10px} #${4:05a});
+]]></content>
+	<tabTrigger>le-text-shadow</tabTrigger>
+	<scope>source.less</scope>
+	<description>字体阴影</description>
+</snippet>

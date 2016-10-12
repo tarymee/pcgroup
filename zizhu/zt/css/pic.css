@@ -1,0 +1,21 @@
+/*图文模块*/
+.m-pic-wrap{}
+.m-pic{position:relative;height:100%;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;}
+.m-pic img{width:100%;}
+.m-picA-text{
+	opacity:0.9;
+	background-color:#000;
+	color:#fff;
+	width:100%;padding:10px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	position:absolute;
+}
+.m-picA-text-top{top:0px;left:0px;}
+.m-picA-text-middle{top:50%;margin-top:-40px;}
+.m-picA-text-bottom{left:0px;bottom:0px;}
+
+.m-picA-tit{font-size:20px;color:#fff;line-height:35px;}
+.m-picA-des{font-size:16px;color:#fff;line-height:20px;}

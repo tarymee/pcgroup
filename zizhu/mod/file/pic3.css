@@ -1,0 +1,27 @@
+/*3连横图*/
+.play .m-pic3{
+	-webkit-transform:scale(1,1) rotate(0deg) translate(0,0);
+	-moz-transform:scale(1,1) rotate(0deg) translate(0,0);
+	-ms-transform:scale(1,1) rotate(0deg) translate(0,0);
+	transform:scale(1,1) rotate(0deg) translate(0,0);
+}
+.m-pic3{
+	-webkit-transform:scale(0,0);
+	-moz-transform:scale(0,0);
+	-ms-transform:scale(0,0);
+	transform:scale(0,0);
+
+	-webkit-transform-origin:50% 50%;
+	-moz-transform-origin:50% 50%;
+	-ms-transform-origin:50% 50%;
+	transform-origin:50% 50%;
+
+	-webkit-transition:all .3s linear;
+	-moz-transition:all .3s linear;
+	-ms-transition:all .3s linear;
+	transition:all .3s linear;
+}
+.m-pic3-item{display:block;position:relative;margin-bottom:15px;}
+.m-pic3-item:last-child{margin-bottom:0px;}
+.m-pic3-item img{width:100%;}
+.m-pic3-item span{display:block;width:90%;padding:5px 5%;line-height:25px;background-color:rgba(000,000,000,0.7);font-size:16px;color:#fff;position:absolute;bottom:0px;left:0px;}

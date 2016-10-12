@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.dis-ib-item();
+]]></content>
+	<tabTrigger>le-dis-ib-item</tabTrigger>
+	<scope>source.less</scope>
+	<description>行内布局 子元素</description>
+</snippet>

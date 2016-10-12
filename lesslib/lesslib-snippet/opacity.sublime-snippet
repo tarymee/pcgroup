@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.opacity(${1:0.5});
+]]></content>
+	<tabTrigger>le-opacity</tabTrigger>
+	<scope>source.less</scope>
+	<description>透明值</description>
+</snippet>

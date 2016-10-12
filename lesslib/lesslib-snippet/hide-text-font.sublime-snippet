@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.hide-text-font();
+]]></content>
+	<tabTrigger>le-hide-text-font</tabTrigger>
+	<scope>source.less</scope>
+	<description>字号0文字隐藏法</description>
+</snippet>

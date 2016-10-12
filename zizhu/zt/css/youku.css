@@ -1,0 +1,6 @@
+/*轮播*/
+.m-youku-wrap{}
+.m-youku iframe{width:100%;height:auto;min-height:240px;background:rgba(255,255,255,0.1) url(http://www1.pclady.com.cn/global/2015/h5/admin/zt/img/loadding.gif) no-repeat center center;}
+@media only screen and (min-width:768px){
+.m-youku iframe{min-height:450px;}
+}

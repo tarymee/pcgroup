@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.appearance(${1:none});
+]]></content>
+	<tabTrigger>le-appearance</tabTrigger>
+	<scope>source.less</scope>
+	<description>元素外观样式</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.box-shadow(${1:inset} ${2:0} ${3:0} ${4:10px} #${5:05a});
+]]></content>
+	<tabTrigger>le-box-shadow</tabTrigger>
+	<scope>source.less</scope>
+	<description>盒阴影</description>
+</snippet>

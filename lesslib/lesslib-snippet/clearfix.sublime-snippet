@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.clearfix();
+]]></content>
+	<tabTrigger>le-clearfix</tabTrigger>
+	<scope>source.less</scope>
+	<description>清除浮动</description>
+</snippet>

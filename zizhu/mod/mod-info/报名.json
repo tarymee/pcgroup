@@ -1,0 +1,30 @@
+标题:
+报名
+
+封面:
+http://www1.pclady.com.cn/global/2015/h5/admin/img/mod8cover.jpg
+
+类型:
+报名模板
+
+model类型:
+mod8
+
+排序号:
+10
+
+压缩JSON字段配置:
+{"sign":{"type":"sign","title":"选择要提交的资料","tip":"上传图片 尺寸 640*1000","con":[{"name":"name","isWant":1},{"name":"sex","isWant":1},{"name":"tel","isWant":1},{"name":"email","isWant":1},{"name":"address","isWant":1},{"name":"skin","isWant":1}]},"btnPosition":{"type":"inputRadio","title":"按钮位置","options":[["top","顶部"],["middle","中部"],["bottom","底部"]],"tip":"","con":"bottom"},"textColor":{"type":"inputColor","title":"字体颜色","tip":"16进制颜色 比如 #ffffff","con":"#ffffff"},"textBgcolor":{"type":"inputColor","title":"按钮颜色","tip":"16进制颜色 比如 #ffffff","con":"#000000"},"bg":{"type":"uploadPic","title":"背景图片","tip":"背景 尺寸 640*1000 如不需要背景则不用上传","removeBtn":"1","con":""},"bgColor":{"type":"inputColor","title":"背景颜色","tip":"16进制颜色 比如 #ffffff","con":""},"bgOpacity":{"type":"inputRange","title":"不透明度","min":"0","max":"100","step":"1","tip":"背景颜色 0表示完全透明 100表示完全不透明","con":"0"}}
+
+
+压缩HTML代码配置:
+<li class="m-sign-wrap" data-type="sign"><div class="m-bg">{{if bg.con}}<img src="{{bg.con}}" />{{/if}}<div class="m-bg-cover-color"></div>{{if bgOpacity.con}}<div class="m-bg-item-color" style="{{if bgColor.con}}background-color:{{bgColor.con}};{{/if}}opacity:{{bgOpacity.con/100}};"></div>{{/if}}</div><div class="m-valign"><div class="m-sign-btn{{if btnPosition.con}} m-sign-btn-{{btnPosition.con}}{{/if}}" style="display:block;{{if textBgcolor.con}}background-color:{{textBgcolor.con}};{{/if}}{{if textColor.con}}color:{{textColor.con}};{{/if}}">我要报名</div><div class="m-valign-item"><form class="m-sign" style="display:none">{{each sign.con as value i}}{{if value.name=="name" && value.isWant=="1"}}<div class="m-sign-item"><div class="m-sign-l">姓名：</div><input type="text" name="name" placeholder="" class="m-sign-text" ></div>{{/if}}{{if value.name=="sex" && value.isWant=="1"}}<div class="m-sign-item"><div class="m-sign-l">性别：</div><div class="m-sign-r"><label onclick=""><input type="radio" name="sex" checked="checked" value="男"/><span>男</span></label><label onclick=""><input type="radio" name="sex" value="女"/><span>女</span></label></div></div>{{/if}}{{if value.name == "tel" && value.isWant == "1"}}<div class="m-sign-item"><div class="m-sign-l">电话：</div><input type="text" name="tel" placeholder="" class="m-sign-text"></div>{{/if}}{{if value.name == "email" && value.isWant == "1"}}<div class="m-sign-item"><div class="m-sign-l">邮箱：</div><input type="text" name="email" placeholder="" class="m-sign-text"></div>{{/if}}{{if value.name == "address" && value.isWant == "1"}}<div class="m-sign-item"><div class="m-sign-l">省份：</div><select name="province" class="m-sign-select"><option value="">请选择省份</option></select></div><div class="m-sign-item"><div class="m-sign-l">城市：</div><select name="city" class="m-sign-select"><option value="">请选择城市</option></select></div><div class="m-sign-item"><div class="m-sign-l">地址：</div><input type="text" name="address" placeholder="" class="m-sign-text"></div>{{/if}}{{if value.name == "skin" && value.isWant == "1"}}<div class="m-sign-item"><div class="m-sign-l">肤质：</div><div class="m-sign-r"><label onclick=""><input type="radio" name="skin" checked="checked" value="中性"/><span>中性</span></label><label onclick=""><input type="radio" name="skin" value="混合性"/><span>混合性</span></label><label onclick=""><input type="radio" name="skin" value="油性"/><span>油性</span></label><label onclick=""><input type="radio" name="skin" value="干性"/><span>干性</span></label><label onclick=""><input type="radio" name="skin" value="敏感性"/><span>敏感性</span></label></div></div>{{/if}}{{/each}}<div class="m-sign-submit">提交</div></form><div class="m-sign-close" style="display:none"></div></div></div><div class="m-next"></div></li>
+
+
+
+JS，半角逗号分隔:
+sign.js
+
+
+css，半角逗号分隔:
+common.css,sign.css

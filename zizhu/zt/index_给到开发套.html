@@ -1,0 +1,47 @@
+<!doctype HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta content="telephone=no" name="format-detection" />
+<title>太平洋时尚网 专题模板</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="zhuanghuanbin_gz" />
+
+
+<link rel="apple-touch-icon-precomposed" href="{{开发套入用户上传的专题封面地址}}"/>
+
+<link href="{{开发套入合并的css}}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="g-doc" id="Jdoc">
+	<div class="slider-wrap" id="Jslide">
+		<ul class="slider-pic">
+			{{这里按顺序插入各个帧的html}}
+		</ul>
+	</div>
+</div>
+
+
+{{开发这里插入专题设置的html，主要是为了设置专题的背景图片，音乐，箭头样式等}}
+
+
+
+<script type="text/javascript">
+var ZTID = "273";//这里写入专题id
+var INTF = {
+	"postEnroll":"http://h5.pclady.com.cn/interface/postEnroll.jsp",
+	"getArea":"http://h5.pclady.com.cn/interface/getArea.jsp",
+	"image2base64":"http://h5.pclady.com.cn/interface/image2base64.jsp"
+};
+document.domain = "pclady.com.cn";
+</script>
+
+<script src="http://js.3conline.com/wap/common/swipe.extend.1.1-min.js" charset="utf-8"></script>
+<script src="http://js.3conline.com/pclady/2015/h5/admin/zt/core.js" charset="utf-8"></script>
+<script src="{{开发这里插入合并的js}}" charset="utf-8"></script>
+
+
+</body>
+</html>

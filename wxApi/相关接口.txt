@@ -1,0 +1,16 @@
+获取微信js-sdk的票据接口
+电脑：http://mrobot.pconline.com.cn/v3/weixin/getSign?account=pconline_cn
+汽车：http://mrobot.pcauto.com.cn/v3/weixin/getSign?account=pcautoweixin1
+亲子：http://mrobot.pcbaby.com.cn/v3/weixin/getSign?account=pcbaby_cn
+时尚：http://mrobot.pclady.com.cn/v3/weixin/getSign?account=pclady2004
+游戏：http://mrobot.pcgames.com.cn/v3/weixin/getSign?account=pcgames_cn
+家居：http://mrobot.pchouse.com.cn/v3/weixin/getSign?account=PChouse-2010
+
+
+获取access_token
+电脑：http://mrobot.pconline.com.cn/v3/weixin/getAccessToken?from=pconline&account=pconline_cn
+汽车：http://mrobot.pcauto.com.cn/v3/weixin/getAccessToken?from=pcauto&account=pcautoweixin1
+亲子：http://mrobot.pcbaby.com.cn/v3/weixin/getAccessToken?from=pcbaby&account=pcbaby_cn
+时尚：http://mrobot.pclady.com.cn/v3/weixin/getAccessToken?from=pclady&account=pclady2004
+游戏：http://mrobot.pcgames.com.cn/v3/weixin/getAccessToken?from=pcgames&account=pcgames_cn
+家居：http://mrobot.pchouse.com.cn/v3/weixin/getAccessToken?from=pchouse&account=PChouse-2010

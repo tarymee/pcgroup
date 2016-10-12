@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.valign-mid-wrapA();
+]]></content>
+	<tabTrigger>le-valign-mid-wrapA</tabTrigger>
+	<scope>source.less</scope>
+	<description>垂直居中 父元素</description>
+</snippet>

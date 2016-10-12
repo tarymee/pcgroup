@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.border-radius(${1:5}px);
+]]></content>
+	<tabTrigger>le-border-radius</tabTrigger>
+	<scope>source.less</scope>
+	<description>圆角</description>
+</snippet>

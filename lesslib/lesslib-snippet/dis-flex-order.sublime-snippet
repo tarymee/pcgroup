@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.dis-flex-order();
+]]></content>
+	<tabTrigger>le-dis-flex-order</tabTrigger>
+	<scope>source.less</scope>
+	<description>弹性布局 子元素序号</description>
+</snippet>

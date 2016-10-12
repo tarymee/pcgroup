@@ -1,0 +1,4 @@
+/*图片按钮模块*/
+.m-picBtn{position:relative;}
+.m-picBtn img{width:100%;}
+.m-picBtn-btn{display:block;width:60%;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;border-radius:3px;text-align:center;margin:15px auto;line-height:45px;font-size:18px;background-color:#000;color:#fff;height:45px;overflow:hidden;}

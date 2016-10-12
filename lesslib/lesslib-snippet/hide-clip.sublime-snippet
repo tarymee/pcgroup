@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.hide-clip();
+]]></content>
+	<tabTrigger>le-hide-clip</tabTrigger>
+	<scope>source.less</scope>
+	<description>裁剪元素隐藏法</description>
+</snippet>

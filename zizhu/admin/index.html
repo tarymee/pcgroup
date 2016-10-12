@@ -1,0 +1,106 @@
+<!doctype HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta content="telephone=no" name="format-detection" />
+<title>自助专题 - 设置</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="zhuanghuanbin_gz" />
+<!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+<link href="http://js.3conline.com/pclady/2015/h5/admin/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="m-head">
+	<div class="m-head-main">
+		<div class="m-head-logo"></div>
+		<a class="m-head-bc m-btn" id="JsaveDone">保存并提交</a>
+		<a class="m-head-zc m-btn" id="JsaveHold">暂存</a>
+		<a class="m-head-yl" id="Jpreview">预览</a>
+	</div>
+</div>
+<div class="g-doc">
+	<div class="g-A">
+		<a class="g-A-back">返回专题列表</a>
+		<div class="m-nav-wrap"><ul class="m-nav" id="Jnav"></ul></div>
+		<a class="g-A-add" id="JnavAdd">新增页面</a>
+	</div>
+	<div class="g-BC" id="JmodWrap">
+		<div class="m-sel-mods" id="JselModWrap" style="height:100%;display:none;">
+			<div class="m-sel-mods-tit">选择页面模版</div>
+			<ul id="JselMod">
+			</ul>
+			<div class="m-btn-wrap"><a class="m-btn fn-fr" id="JselModSave">保存</a></div>
+		</div>
+	</div>
+</div>
+
+<div class="m-pic-wrap" id="JpicWrap">
+	<div class="m-pic">
+		<div id="Jpic">
+			<div class="m-pic-upload" id="JpicUpload">
+				<input type="file" onchange="UPCPic.updatePic(this)" accept="image/*" />
+			</div>
+		</div>
+		<div class="m-btn-wrap"><a class="m-btn fn-fr" id="JpicSave">使用该图片</a></div>
+	</div>
+	<div class="m-pic-close" id="JpicClose">&times;</div>
+</div>
+
+
+
+<script type="text/javascript">
+var ZTID = "22";//这里写入专题id
+//初始化UPC上传对象
+var upcInitData = {
+	//开发地址：http://dev2.pconline.com.cn:9192/uploadcenter 线上地址：http://upc.pconline.com.cn
+	upcPath:"http://upc.pclady.com.cn/",//UPC服务器地址
+	application:"pclady_special",//上传应用名
+	command:[43001,43002]
+// 	sessionCookieName:"",//通行证登录cookie名称（开发环境：common_session_id1 线上环境：common_session_id）	
+};
+
+var INTF = {
+	"getSpecial":"http://h5.pclady.com.cn/admin/interface/special/getSpecial.jsp",
+	"postSpecial":"http://h5.pclady.com.cn/admin/interface/special/postSpecial.jsp",
+	"getTemplateList":"http://h5.pclady.com.cn/admin/interface/template/getTemplateList.jsp",
+	"createTemplate":"http://h5.pclady.com.cn/admin/interface/template/createTemplate.jsp",
+	"getTemplate":"http://h5.pclady.com.cn/admin/interface/template/getTemplate.jsp",
+	"updateTemplate":"http://h5.pclady.com.cn/admin/interface/template/updateTemplate.jsp",
+	"postEnroll":"http://h5.pclady.com.cn/interface/postEnroll.jsp",
+	"view":"http://h5.pclady.com.cn/special/view.do",
+	"pcView":"http://h5.pclady.com.cn/admin/special/pcView.do"
+}
+
+// var INTF = {
+// 	//获取专题基本信息
+// 	"getSpecial":"http://dev35.pclady.com.cn:8081/admin/interface/special/getSpecial.jsp",
+// 	//更新专题基本信息
+// 	"postSpecial":"http://dev35.pclady.com.cn:8081/admin/interface/special/postSpecial.jsp",
+// 	//获取模板列表
+// 	"getTemplateList":"http://dev35.pclady.com.cn:8081/admin/interface/template/getTemplateList.jsp",
+// 	//创建stid
+// 	"createTemplate":"http://dev35.pclady.com.cn:8081/admin/interface/template/createTemplate.jsp",
+// 	//获取帧模板数据
+// 	"getTemplate":"http://dev35.pclady.com.cn:8081/admin/interface/template/getTemplate.jsp",
+// 	//更新帧模板
+// 	"updateTemplate":"http://dev35.pclady.com.cn:8081/admin/interface/template/updateTemplate.jsp",
+// 	"postEnroll":"http://dev35.pclady.com.cn:8081/admin/interface/postEnroll.jsp",
+// 	//预览页面
+// 	"view":"http://dev35.pclady.com.cn:8081/admin/special/view.do",
+// 	//pc端预览页面
+// 	"pcView":"http://dev35.pclady.com.cn:8081/admin/special/pcView.do"
+// };
+
+</script>
+<script src="http://js.3conline.com/pclady/2015/h5/admin/data.js" charset="utf-8"></script>
+<script src="http://js.3conline.com/pclady/2015/h5/admin/UPC.js" charset="utf-8"></script>
+<script src="http://js.3conline.com/pclady/2015/h5/admin/core.js" charset="utf-8"></script>
+
+<!-- <script src="data.js" charset="utf-8"></script> -->
+<!-- <script src="UPC.js" charset="utf-8"></script> -->
+<!-- <script src="core.js" charset="utf-8"></script> -->
+
+</body>
+</html>

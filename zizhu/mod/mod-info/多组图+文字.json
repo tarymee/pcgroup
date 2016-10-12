@@ -1,0 +1,30 @@
+标题:
+多组图+文字
+
+封面:
+http://www1.pclady.com.cn/global/2015/h5/admin/img/mod9cover.jpg
+
+类型:
+普通魔板
+
+model类型:
+mod9
+
+排序号:
+8
+
+压缩JSON字段配置:
+{"sliderPic":{"type":"sliderPic","tip":"组图 尺寸 640*640","tip2":"请填写图片说明 40个字以内","con":[{"picUrl":"","textContent":""}]},"textColor":{"type":"inputColor","title":"字体颜色","tip":"16进制颜色 比如 #ffffff","con":"#000000"},"bg":{"type":"uploadPic","title":"背景图片","tip":"背景 尺寸 640*1000 如不需要背景则不用上传","removeBtn":"1","con":""},"bgColor":{"type":"inputColor","title":"背景颜色","tip":"16进制颜色 比如 #ffffff","con":"#ffffff"},"bgOpacity":{"type":"inputRange","title":"不透明度","min":"0","max":"100","step":"1","tip":"背景颜色 0表示完全透明 100表示完全不透明","con":"0"}}
+
+
+压缩HTML代码配置:
+<li class="m-lunbo-wrap" data-type="lunbo" style="color:{{textColor.con}};"><div class="m-bg">{{if bg.con}}<img src="{{bg.con}}" />{{/if}}<div class="m-bg-cover-color"></div>{{if bgOpacity.con}}<div class="m-bg-item-color" style="{{if bgColor.con}}background-color:{{bgColor.con}};{{/if}}opacity:{{bgOpacity.con/100}};"></div>{{/if}}</div><div class="m-valign"><div class="m-lunbo m-valign-item"><ul>{{each sliderPic.con as value i}}<li><img src="{{value.picUrl}}" /><div class="m-lunbo-des">{{value.textContent}}</div></li>{{/each}}</ul><div class="m-lunbo-nav"></div></div></div><div class="m-next"></div></li>
+
+
+
+JS，半角逗号分隔:
+lunbo.js
+
+
+css，半角逗号分隔:
+common.css,lunbo.css

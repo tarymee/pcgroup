@@ -1,0 +1,33 @@
+/*报名*/
+.m-sign{margin:10px 15px;position:relative;}
+
+.m-sign-close{width:25px;height:25px;position:absolute;top:10px;right:10px;}
+.m-sign-close::before{content:"";width:34px;height:1px;background-color:#343466;position:absolute;left:50%;top:12px;margin-left:-17px;-webkit-transform:rotate(45deg);transform:rotate(45deg);}
+.m-sign-close::after{content:"";width:34px;height:1px;background-color:#343466;position:absolute;left:50%;top:12px;margin-left:-17px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+
+.m-sign-btn{width:120px;height:120px;background-color:#999;-webkit-border-radius:60px;-moz-border-radius:60px;-ms-border-radius:60px;border-radius:60px;color:#fff;line-height:120px;font-size:20px;font-weight:bold;text-align:center;transform:translate(10px,0) translate3d(0);position:absolute;left:50%;margin-left:-60px;}
+.m-sign-btn-top{top:30px;}
+.m-sign-btn-middle{top:50%;margin-top:-60px;}
+.m-sign-btn-bottom{bottom:30px;}
+
+
+.m-sign-submit{line-height:35px;height:35px;width:100%;margin:0px auto;color:#fff;background-color:#000;text-align:center;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;border-radius:3px;font-size:16px;}
+
+.m-sign-item{overflow:hidden;margin:10px 0;}
+.m-sign-item .m-sign-l{font-size:16px;line-height:28px;height:28px;color:#aaaaaa;float:left;width:20%;text-align:center;}
+.m-sign-item .m-sign-text{float:left;width:80%;-webkit-appearance:none;line-height:28px;height:28px;border:1px solid #dddddd;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	border-radius:3px;
+	background-color:transparent;padding-left:5px;font-size:16px;color:#000;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+.m-sign-select{float:left;width:80%;line-height:28px;height:28px;border:1px solid #dddddd;font-size:16px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	border-radius:3px;
+background-color:transparent;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+
+
+.m-sign-r{float:left;line-height:28px;font-size:16px;width:80%;}
+.m-sign-r label{margin-right:20px;float:left;}

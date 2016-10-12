@@ -1,0 +1,30 @@
+标题:
+刮一刮
+
+封面:
+http://www1.pclady.com.cn/global/2015/h5/admin/img/mod3cover.jpg
+
+类型:
+普通魔板
+
+model类型:
+mod3
+
+排序号:
+11
+
+压缩JSON字段配置:
+{"bg":{"type":"uploadPic","title":"背景图片","tip":"背景 尺寸 640*1000","removeBtn":"0","con":""},"pic":{"type":"uploadPic","title":"覆盖图片","tip":"覆盖图片 尺寸 500*780 图片大小越小越好 最大控制在100k左右 如果留空则表示用灰色图层覆盖","removeBtn":"1","con":""},"picOpacity":{"type":"inputRange","title":"不透明度","min":"0","max":"100","step":"1","tip":"覆盖图片 0表示完全透明 100表示完全不透明","con":"100"},"textTitle":{"type":"inputText","title":"第一标题","tip":"15个字以内","con":""},"textContent":{"type":"inputText","title":"第二标题","tip":"15个字以内","con":""},"textColor":{"type":"inputColor","title":"字体颜色","tip":"16进制颜色 比如 #ffffff","con":"#000000"},"maskPercent":{"type":"inputRange","title":"涂抹比例","min":"0","max":"100","step":"1","tip":"50表示涂抹50%后自动抹净","con":"50"}}
+
+
+压缩HTML代码配置:
+<li class="m-mask-wrap" disableSlide="true" data-type="mask"><div class="m-cover-bg"{{if bg.con}} style="background:url({{bg.con}}) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;"{{/if}}></div><canvas class="m-cover-mask" data-img="{{pic.con}}" data-percent="{{maskPercent.con}}" style="opacity:{{picOpacity.con/100}}"></canvas><div class="m-cover-hand"{{if textColor.con}} style="color:{{textColor.con}};"{{/if}}><img src="http://www1.pclady.com.cn/global/2015/h5/admin/zt/img/gua.png"><div class="m-cover-hand-tit">{{textTitle.con}}</div><div class="m-cover-hand-tip">{{textContent.con}}</div></div><div class="m-next" style="display:none;"></div></li>
+
+
+
+JS，半角逗号分隔:
+mask.js
+
+
+css，半角逗号分隔:
+common.css,mask.css

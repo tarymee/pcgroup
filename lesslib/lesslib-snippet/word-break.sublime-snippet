@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.word-break();
+]]></content>
+	<tabTrigger>le-word-break</tabTrigger>
+	<scope>source.less</scope>
+	<description>强制换行</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.alpha-background(#${1:000},${2:0.5});
+]]></content>
+	<tabTrigger>le-alpha-background</tabTrigger>
+	<scope>source.less</scope>
+	<description>透明背景</description>
+</snippet>

@@ -1,0 +1,50 @@
+// 三角形 (颜色,宽度,方向)
+// -------------------------
+.icon-arrow(@color:#2AB2DF,@width:6px,@direction:top) {
+	font-size: 0;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+	border:0 dashed transparent;
+	border-width:@width;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = top) {
+	border-bottom-style:solid;
+	border-bottom-color:@color;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = bottom) {
+	border-top-style: solid;
+	border-top-color: @color;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = left) {
+	border-right-style: solid;
+	border-right-color: @color;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = right) {
+	border-left-style: solid;
+	border-left-color: @color;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = left-top) {
+	border-top-style: solid;
+	border-top-color: @color;
+	border-left-width: 0 !important;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = right-top) {
+	border-top-style: solid;
+	border-top-color: @color;
+	border-right-width: 0 !important;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = left-bottom) {
+	border-bottom-style: solid;
+	border-bottom-color: @color;
+	border-left-width: 0 !important;
+}
+.icon-arrow (@color:#2AB2DF,@width:6px,@direction:top) when (@direction = right-bottom) {
+	border-bottom-style: solid;
+	border-bottom-color: @color;
+	border-right-width: 0 !important;
+}

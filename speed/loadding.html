@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style>
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,hr,thead,tbody,tfoot,th,td{margin:0;padding:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;color:#444444;}
+a:hover{color:#444444;}
+html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;font-size:62.5%;}
+body{font-size:15px;line-height:1.5em;color:#444444;}
+body,button,input,select,textarea{font-family:'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+b,strong{font-weight:bold;}
+i,em{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+table th,table td{border:1px solid #ddd;padding:5px;}
+table th{font-weight:inherit;border-bottom-width:2px;border-bottom-color:#ccc;}
+img{border:0 none;width:auto\9;max-width:100%;vertical-align:top;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;vertical-align:baseline;}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+button[disabled],input[disabled]{cursor:default;}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+input{line-height:normal!important;}
+}
+select[size],select[multiple],select[size][multiple]{border:1px solid #AAA;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+audio,canvas,video,progress{display:inline-block;}
+a:visited{color:#444;}
+body{background-color:#f5f6f8;}
+.g-doc{overflow:hidden;margin:0 auto;}
+@media only screen and (min-width:1025px){
+.g-doc{max-width:320px;}
+}
+/* 模块化 */
+.lazy_img{background:#d9d9d9 url(img/holder.png) no-repeat center center;-webkit-background-size:contain;background-size:contain;}
+/* 焦点图 */
+.slider-top{width:100%;margin:0 auto;overflow:hidden;position:relative;}
+.slider-top-pic{position:relative;overflow:hidden;}
+.slider-top-pic li{position:relative;float:left;width:100%;}
+.slider-top-pic li:not(:first-child){display:none;}
+.slider-top-pic li a{display:block;}
+.slider-top-pic li img{display:block;width:100%!important;}
+.slider-top-pic li span{width:80%;padding:0 17% 0 3%;height:50px;line-height:70px;position:absolute;bottom:0px;color:#fff;display:block;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;font-size:14px;background:rgba(0,0,0,0.8);background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,0.8)));background:-webkit-linear-gradient(top,transparent 30%,rgba(0,0,0,0.8) 100%);background:linear-gradient(to bottom,transparent 30%,rgba(0,0,0,0.8) 100%);}
+.slider-top-pic .lazy_img{background-size:inherit;}
+.slider-top-doc{height:6px;position:absolute;right:5px;bottom:10px;}
+.slider-top-doc span{display:inline-block;width:6px;height:6px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;background-color:#b4b8bd;margin:0 2px;font-size:0px;vertical-align:top;}
+.slider-top-doc .current{background:#fff;}
+
+
+.m-yh a{display:block;height:40px;line-height:40px;border-bottom:1px solid #d7d7d7;padding:0 10px;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+
+.h-800{height:800px;}
+.h-205{height:205px;}
+.bgc-blue{background-color:blue;}
+
+.m-loadding{position:relative;}
+.m-loadding-txt{height:25px;line-height: 25px; text-align: center; width:100%;position:absolute;left:0;bottom:0;right:0;top:0;margin:auto;}
+</style>
+</head>
+<body id="index">
+<div class="g-doc">
+	<div class="slider-top">
+	<div class="slider-top-wrap" id="Jfocus">
+	<ul class="slider-top-pic">
+	<li>
+	<a href=""><img src="img/focus1.jpg" alt=""/>
+	<span>豪华的另一种诠释 评测全新一代宝马7系</span>
+	</a>
+	</li>
+	<li>
+	<a href=""><img class="lazy_img" src="img/space21.png" src2="img/focus2.jpg" alt=""/>
+	<span>底盘用料中规中矩 斯柯达新速派底盘实拍</span>
+	</a>
+	</li>
+	<li>
+	<a href=""><img class="lazy_img" src="img/space21.png" src2="img/focus3.jpg" alt=""/>
+	<span>AMG品牌精髓：聊聊AMG的传奇数字63</span>
+	</a>
+	</li>
+	<li>
+	<a href=""><img class="lazy_img" src="img/space21.png" src2="img/focus4.jpg" alt=""/>
+	<span>静态体验东风风行S500 价格实惠配置高</span>
+	</a>
+	</li>
+	</ul>
+	</div>
+	<div class="slider-top-doc" id="Jnav"></div>
+	</div>
+
+	<div class="h-800 bgc-blue"></div>
+
+	<div class="m-yh" id="Jyh">
+		<div class="m-loadding h-205"><div class="m-loadding-txt">数据正在加载中...</div></div>
+	</div>
+</div>
+
+<script src="http://js.3conline.com/min2/temp/v2/plugin-swipe.extend,plugin-lazy.js" charset="utf-8"></script>
+<script type="text/javascript">
+function $$(id) {
+	return (typeof id == "object") ? id : document.getElementById(id);
+}
+
+function loadJs(url, fn, callbackName) {
+	if (url.indexOf("?") != -1) {
+		var url = url + '&callback=' + callbackName;
+	} else {
+		var url = url + '?callback=' + callbackName;
+	}
+	if (!window[callbackName]) {
+		window[callbackName] = fn;
+	};
+	var head = document.getElementsByTagName("head")[0];
+	var script = document.createElement("script");
+	script.setAttribute("type", "text/javascript");
+	script.setAttribute("src", url);
+	head.appendChild(script);
+	script.onload = script.onreadystatechange = function() {
+		var f = script.readyState;
+		if (f && f != "loaded" && f != "complete") return;
+		script.onload = script.onreadystatechange = null;
+		head.removeChild(script);
+		// delete window[callbackName];
+	};
+}
+
+//主焦点图
+swipe($$("Jfocus"), {
+	nav: $$("Jnav"),
+	auto: 5000,
+	speed: 500,
+	continuous: true
+});
+
+// 非首屏按需加载数据
+var jsList_ = [{
+	id: "Jyh",
+	js: function () {
+		loadJs("http://price.pcauto.com.cn/dealer/interface/dealer_push_news_fav.jsp?rid=1&serialGroupIds=1633,2734,4639,10018,3127", function(data) {
+			// console.log(data);
+			var html = "";
+			for (var i = 0; i < data.result.length; i++) {
+				data.result[i]
+				html += '<a href="'+data.result[i].newsUrl+'">'+data.result[i].dealerShortName+'</a>';
+			};
+			$$("Jyh").innerHTML = html;
+		}, "loadYh");
+	}
+}];
+var xx = Lazy.create({
+	lazyId: "index",
+	// trueSrc: 'src1',
+	jsList: jsList_,
+	offset: 300,
+	delay: 100,
+	delay_tot: 5000
+});
+Lazy.init(xx);
+
+</script>
+</body>
+</html>

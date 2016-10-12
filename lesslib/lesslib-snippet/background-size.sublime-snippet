@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.background-size(${1:auto | cover | contain});
+]]></content>
+	<tabTrigger>le-background-size</tabTrigger>
+	<scope>source.less</scope>
+	<description>背景大小</description>
+</snippet>

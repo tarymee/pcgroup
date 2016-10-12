@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.icon-arrow (#${1:777},${2:6px},${3:left | top | bottom | right | left-top | right-top | left-bottom | right-bottom});
+]]></content>
+	<tabTrigger>le-icon-arrow</tabTrigger>
+	<scope>source.less</scope>
+	<description>三角形</description>
+</snippet>

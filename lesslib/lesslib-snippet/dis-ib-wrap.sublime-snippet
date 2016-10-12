@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.dis-ib-wrap();
+]]></content>
+	<tabTrigger>le-dis-ib-wrap</tabTrigger>
+	<scope>source.less</scope>
+	<description>行内布局 父元素</description>
+</snippet>

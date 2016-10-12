@@ -1,0 +1,98 @@
+#Jcmt a{text-decoration:none;}
+#Jcmt i,#Jcmt em{font-style:normal;}
+/* 评论标题 */
+.m-cmt-section{height:30px;line-height:30px;margin-top:15px;overflow:hidden;}
+.m-cmt-section-mark{float:left;font-size:20px;margin:0 10px;}
+/* 更多 */
+.m-cmt-more{line-height:36px;font-size:14px;color:#777777;border-radius:18px;border:1px solid #dddddd;width:70%;text-align:center;margin:10px auto;}
+.m-cmt-more em{color:#f94e4e;}
+/* 无数据 */
+.m-cmt-none{display:none;padding:40px 10px;}
+.m-cmt-none p{text-align:center;color:#bbb;font-size:14px;line-height:20px;margin:0px;}
+/* 加载中 */
+.m-cmt-loading{display:none;padding:40px 10px;text-align:center;color:#bbb;font-size:14px;line-height:20px;}
+
+
+/* 评论列表 */
+.m-cmt-list{overflow:hidden;font-size:14px;margin:0 10px;}
+.m-cmt-list-item{border-bottom:1px solid #e4e4e4;padding:10px 0;}
+.m-cmt-list-item:last-child{border-bottom:none;}
+.m-cmt-list-item-l{float:left;width:40px;height:40px;margin-right:5px;border-radius:50%;overflow:hidden;}
+.m-cmt-list-item-l img{display:block; width:40px;height:40px;border-radius:50%;overflow:hidden;}
+.m-cmt-list-item-con{overflow:hidden;margin-top:10px;}
+.m-cmt-list-item-th{font-size:12px;overflow:hidden;line-height:15px;}
+.m-cmt-list-item-name{float:left;max-width:200px;color:#007ADF;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.m-cmt-list-item-name-mobile:after{content:"";padding-right:18px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeBAMAAAC2z6FgAAAAMFBMVEUPDw8PDw8iIiIzMzNERERVVVVmZmZ3d3eJiYmampqrq6vKysrJycn+/v7///8PDw8zzcQzAAAAEHRSTlP///////////////////8A4CNdGQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAERJREFUKM9j+I8BGCgT2nMGDPYjhH5DRM6cRgj9OfsOBN6eQRI6BxZ6NyqELXCgQYgmdPcOhtA9VKHfUFWn8cYQObENAGquAh6oSNBcAAAAAElFTkSuQmCC) no-repeat;background-size:18px;}
+.m-cmt-list-item-name-wechat:after{content:"";padding-right:18px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeBAMAAAC2z6FgAAAAMFBMVEUPDw8PDw8iIiIzMzNERERVVVVmZmZ3d3eJiYmampqrq6vx8fHKysrW1tb///8PDw/PY8+YAAAAEHRSTlP///////////////////8A4CNdGQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAJ5JREFUKM+lkd0RxCAIhNN/bUAFSAWCDVzI4c9pvDxmx6dvhN0djuuh4x1ShlQ2pBDCckMOaKZAN5SDVFYmcpaKjGUhtGTxlCY6qSOziT7U5iwByo64JpE7UggTruH6rub3c+2O8QlVTEVx5VJqyHClz8MWOjqj4x/KAKQDjUEWTdqq21h/1Xy+hejaonZ5K0TbOTxqMz0u5On9aTd9ASb4AfojNJqDAAAAAElFTkSuQmCC) no-repeat;background-size:18px;}
+.m-cmt-list-item-name-none{color:#acacac;}
+.m-cmt-list-item-floor{float:right;color:#acacac;}
+.m-cmt-list-item-tb{color:#444;line-height:24px;margin:5px 0;word-wrap:break-word;word-break:break-all;}
+.m-cmt-list-item-tb img{vertical-align:middle;}
+.m-cmt-list-item-inner{padding:5px;}
+.m-cmt-list-item .m-cmt-list-item-tb .fn-no-bm{border:0;padding:0}
+.m-cmt-list-item .fn-no-m > .m-cmt-list-item-inner{display:none}
+.m-cmt-list-item-more{height:34px;line-height:34px;text-align:center;color:#1482E0;display:block;cursor:pointer;}
+
+.m-cmt-list-item-tf{overflow:hidden;font-size:12px;height:15px;}
+.m-cmt-list-item-date{float:left;color:#acacac;line-height:15px;}
+
+.m-cmt-list-item-tip{color:#acacac;line-height:15px;}
+.m-cmt-list-item-btns{float:right;line-height:15px;}
+.m-cmt-list-item-btns a{display:inline-block;min-width:23px;padding-left:17px;height:15px;line-height:15px;vertical-align:middle;margin-left:10px;color:#999;-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer;}
+.m-cmt-list-item-ding{background-image:url(http://www1.pcauto.com.cn/wap/20160217/cmt/img/emo.png);background-position:0 19px;background-size:100px;}
+.m-cmt-list-item-ding i{font-style:normal;line-height:17px;}
+.m-cmt-list-item-repost{background-image:url(http://www1.pcauto.com.cn/wap/20160217/cmt/img/emo.png);background-position:0 43px;background-size:100px;}
+.m-cmt-list-item .m-cmt-list-item-repeat{border:1px solid #EEE5C2;padding:2px;background:#FFFCF0;}
+.m-cmt-list-item-tb>.m-cmt-list-item-repeat{margin-bottom:5px;}
+
+
+/*透明背景*/
+.m-cmt-bg{background-color:rgba(000,000,000,0.3);width:100%;height:100%;position:fixed;left:0px;top:0px;z-index:1;}
+
+/* ++++++发表信息模块+++++++++ */
+.m-cmt-post{width:100%;overflow:hidden;font-size:14px;background-color:#fff;position:fixed;left:0px;bottom:0px;z-index:2;}
+.m-cmt-post-th{height:40px;line-height:40px;overflow:hidden;margin:0 10px;}
+.m-cmt-post-th-l{float:left;}
+.m-cmt-post-th-m{font-size:18px;text-align:center;}
+.m-cmt-post-th-r{float:right;}
+.m-cmt-post-th-r input{height:40px;line-height:40px;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none;border:none;background:transparent;padding:0 0 0 10px;font-size:14px;}
+/*主体输入框*/
+.m-cmt-post-tb{background-color:#efeff1;padding:5px;border-radius:5px;margin:0 10px;}
+.m-cmt-post-tb textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;width:100%;outline:0;border:0;font-size:100%;background:transparent;height:70px;}
+/*验证码*/
+.m-cmt-post-identify{margin:10px 10px 0;height:30px;overflow:hidden;}
+.m-cmt-post-identify span{float:left;height:30px;background-color:#efeff1;width:50%;border-radius:5px;padding:0 5px;}
+.m-cmt-post-identify span input{-webkit-appearance:none;-moz-appearance:none;appearance:none;height:30px;width:100%;outline:none;border:none;font-size:100%;background:transparent;}
+.m-cmt-post-identify img{float:left;height:22px;margin-left:10px;margin-top:4px;}
+/*底部表情和登陆*/
+.m-cmt-post-tf{overflow:hidden;line-height:30px;padding:7px 0;margin:0 10px;}
+.m-cmt-post-tf-r{float:right;}
+.m-cmt-post-tf-r-btn{display:inline-block;color:#007adf;border:1px solid #dddddd;line-height:28px;padding:0 15px;font-size:14px;border-radius:14px;color:#007adf;}
+.m-cmt-post-tf-r-avt{display:inline-block;width:30px;height:30px;border-radius:15px;}
+.m-cmt-post-tf-r-avt img{display:block;width:30px;height:30px;border-radius:15px;}
+.m-cmt-post-emo-btn{float:left; width:30px;height:30px;border-radius:15px;background-image:url(http://www1.pcauto.com.cn/wap/20160217/cmt/img/emo.png);background-position:0 0;background-size:100px;}
+.m-cmt-post-emo-btn.cur{background-position:0 -30px;}
+.m-cmt-post-emo-btn img{display:block;width:30px;height:30px;border-radius:15px;}
+.m-cmt-post-emo-list{overflow:hidden;border-top:2px solid #dddddd;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.m-cmt-post-emo-list.disn{display:none;}
+.m-cmt-post-emo-list img{float:left;width:22px;height:22px;padding:3px;border:1px solid #fff;border-radius:3px;margin:5px;}
+.m-cmt-post-emo-list img.fn-hlight{border:1px solid #1482e0;}
+
+
+/*导航*/
+.m-cmt-nav{width:100%;position:fixed;left:0px;bottom:45px;background-color:#fff;padding:10px 0;z-index:2;}
+.m-cmt-nav-con{max-height:160px;overflow-y:scroll;-webkit-overflow-scroll:touch;}
+.m-cmt-nav a{display:block;padding:0 10px;height:40px;line-height:40px;white-space:nowrap;word-wrap:normal;text-overflow:ellipsis;overflow:hidden;font-size:14px;color:#333;}
+.m-cmt-nav a.cur{color:#007adf;}
+
+/*底部条*/
+.m-cmt-tf{width:100%;height:30px;border-top:1px solid #eeeeee;background-color:#fff;position:fixed;left:0px;bottom:0px;padding:7px 0;z-index:2;}
+.m-cmt-tf-con{height:30px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+.m-cmt-tf-input{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;background-color:#efeff1;color:#999;height:30px;border-radius:15px;line-height:30px;padding-left:10px;font-size:14px;margin:0 10px;}
+.m-cmt-tf-num{display:block;width:30px;height:30px;background-image:url(http://www1.pcauto.com.cn/wap/20160217/cmt/img/emo.png);background-position:0 -120px;background-size:100px;position:relative;margin:0px 10px;}
+.m-cmt-tf-num i{height:15px;line-height:15px;border-radius:7px;color:#ffffff;background-color:#f00;font-size:12px;padding:0 5px;position:absolute;left:17px;top:-3px;max-width:25px;display:block;white-space:nowrap;word-wrap:normal;text-overflow:ellipsis;overflow:hidden;-webkit-transform:scale(0.8,0.8);-ms-transform:scale(0.8,0.8);transform:scale(0.8,0.8);}
+.m-cmt-tf-nav-btn{display:block;width:30px;height:30px;background-image:url(http://www1.pcauto.com.cn/wap/20160217/cmt/img/emo.png);background-position:0 -60px;background-size:100px;margin:0px 10px;}
+.m-cmt-tf-nav-btn.cur{background-position:0 -90px;}
+
+/*底部空白*/
+.m-cmt-bottom-space{height:45px;}

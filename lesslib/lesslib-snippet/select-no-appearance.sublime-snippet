@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.select-no-appearance();
+]]></content>
+	<tabTrigger>le-select-no-appearance</tabTrigger>
+	<scope>source.less</scope>
+	<description>隐藏select下拉箭头</description>
+</snippet>

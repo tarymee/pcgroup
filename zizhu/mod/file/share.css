@@ -1,0 +1,18 @@
+/*分享模块*/
+.m-share-tit{font-size:20px;color:#999;margin:10px;line-height:30px;text-align:center;font-weight:bold;}
+.m-share-des{font-size:15px;color:#999;margin:10px;line-height:30px;text-align:center;}
+.m-share-weixin{font-size:16px;color:#999;margin:30px;-webkit-border-radius:20px;
+-moz-border-radius:20px;
+-ms-border-radius:20px;
+border-radius:20px;border:1px dashed #e5e5e5;line-height:40px;height:40px;text-align:center;font-weight:bold;}
+
+.m-share #Jbdshare_wrap{width:100%;height:90px;margin:0px;}
+.m-share #Jbdshare_wrap #bdshare{text-align:center!important;float:none;}
+.m-share #Jbdshare_wrap .p_tit{display:none!important;}
+.m-share #Jbdshare_wrap #bdshare a{display:inline-block;width:60px;height:90px;float:none;margin:0px 20px;background:none;text-indent:0;color:#999;font-size:14px;line-height:30px;padding:0px;}
+.m-share #Jbdshare_wrap #bdshare a:before{content:"";display:block;width:60px;height:60px;background:url(http://www1.pclady.com.cn/global/2015/h5/admin/zt/img/share.png) no-repeat;-webkit-background-size:60px;-moz-background-size:60px;background-size:60px;-webkit-border-radius:30px;-moz-border-radius:30px;-ms-border-radius:30px;border-radius:30px;}
+.m-share #Jbdshare_wrap .weixin{display:none!important;}
+.m-share #Jbdshare_wrap .timeline{display:none!important;}
+.m-share #Jbdshare_wrap .bds_tsina:before{background-position:0px 0px!important;}
+.m-share #Jbdshare_wrap .bds_tqq:before{background-position:0px -60px!important;}
+.m-share #Jbdshare_wrap .bds_qzone{display:none!important;}

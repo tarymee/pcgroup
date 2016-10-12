@@ -1,0 +1,30 @@
+标题:
+分享
+
+封面:
+http://www1.pclady.com.cn/global/2015/h5/admin/img/mod7cover.jpg
+
+类型:
+普通模板
+
+model类型:
+mod7
+
+排序号:
+14
+
+压缩JSON字段配置:
+{"text1":{"type":"inputText","title":"第一标题","tip":"","con":"分享给朋友，邀请他们一起来参加有机会获得精美礼品哦~！"},"text1Color":{"type":"inputColor","title":"文字颜色","tip":"16进制颜色 比如 #ffffff","con":"#999999"},"text2":{"type":"inputText","title":"第二标题","tip":"","con":"分享后截图发送到PCLADY微信公众号即可"},"text2Color":{"type":"inputColor","title":"文字颜色","tip":"16进制颜色 比如 #ffffff","con":"#999999"},"text3":{"type":"inputText","title":"第三标题","tip":"","con":"微信浏览请点击右上角分享"},"text3Color":{"type":"inputColor","title":"文字颜色","tip":"16进制颜色 比如 #ffffff","con":"#999999"},"bg":{"type":"uploadPic","title":"背景图片","tip":"背景 尺寸 640*1000 如不需要背景则不用上传","removeBtn":"1","con":""},"bgColor":{"type":"inputColor","title":"背景颜色","tip":"16进制颜色 比如 #ffffff","con":"#ffffff"},"bgOpacity":{"type":"inputRange","title":"不透明度","min":"0","max":"100","step":"1","tip":"背景颜色 0表示完全透明 100表示完全不透明","con":"0"}}
+
+
+压缩HTML代码配置:
+<li data-type="share" class="m-share-wrap"><div class="m-bg">{{if bg.con}}<img src="{{bg.con}}" />{{/if}}<div class="m-bg-cover-color"></div>{{if bgOpacity.con}}<div class="m-bg-item-color" style="{{if bgColor.con}}background-color:{{bgColor.con}};{{/if}}opacity:{{bgOpacity.con/100}};"></div>{{/if}}</div><div class="m-valign"><div class="m-valign-item m-share">{{if text1.con}}<div class="m-share-tit"{{if text1Color.con}} style="color:{{text1Color.con}};"{{/if}}>{{text1.con}}</div>{{/if}}{{if text2.con}}<div class="m-share-des"{{if text2Color.con}} style="color:{{text2Color.con}};"{{/if}}>{{text2.con}}</div>{{/if}}{{if text3.con}}<div class="m-share-weixin"{{if text3Color.con}} style="color:{{text3Color.con}};"{{/if}}>{{text3.con}}</div>{{/if}}<div class="" id="Jbdshare_wrap"></div></div></div><div class="m-next"></div></li>
+
+
+
+JS，半角逗号分隔:
+share.js
+
+
+css，半角逗号分隔:
+common.css,share.css

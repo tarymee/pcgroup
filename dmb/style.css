@@ -1,0 +1,73 @@
+/*reset.css 框架*/
+html{
+-webkit-text-size-adjust:none;禁止屏幕旋转自动调整字体
+-webkit-touch-callout:none;/*禁止长按弹出菜单*/
+-webkit-tap-highlight-color:rgba(255, 255, 255, 0); /*禁止点击链接高亮*/
+}
+body,h1,h2,h3,h4,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+ul,ol{list-style:none}
+body,button,input,select,textarea{/*font:14px/1.5 "Lucida Grande","Lucida Sans Unicode","Microsoft Yahei",Helvetica,Arial,Verdana,sans-serif;*/}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+address,em,i{font-style:normal}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+fieldset,img{border:0}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+input,select{vertical-align:middle;}
+.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden;}
+.clearfix:after{clear:both;}
+.clearfix{zoom:1;}
+.nojs{background:#F8F8F8;border:1px solid #D7D7D7;line-height:25px;text-align:center;padding:10px;color:#777;margin:10px;}
+
+html body{background:url(img/bg.gif) repeat;font-family:'Lucida Grande',Verdana,Arial,Sans-Serif;font-size:12px;color:#444;}
+a:hover{text-decoration:none;}
+
+/*选中样式*/
+::-webkit-selection{background:#C74451;color:#fff;}
+::-moz-selection{background:#C74451;color:#fff;}
+::selection{background:#C74451;color:#fff;}
+
+/*头部*/
+header{overflow:hidden;}
+header .logo{float:left;width:120px;height:62px;margin:5px 20px;background:url(img/logo.png) no-repeat;background-size:120px;}
+/*导航*/
+.nav{width:98%;padding:0 1%;background:#0a2833;height:35px;position:relative;}
+.nav li{float:left;}
+.nav li.r{float:right;}
+.nav li>a{display:block;line-height:35px;padding:0 30px;font-weight:bold;color:#fff;font-family:Microsoft YaHei,Microsoft JhengHei;}
+.nav li:hover>a,.nav li>a.cur{background:#C74451;}
+
+.nav li:hover .minNav{display:block;}
+.nav .minNav{display:none;-webkit-box-sizing:border-box;width:100%;min-height:200px;padding:10px;box-shadow:0 2px 10px RGBA(0,0,0,.2);background:url(img/bg.gif) repeat;position:absolute;top:35px;left:0px;border-top:3px solid #C74451;text-align:left;}
+.nav .minNav p{height:25px;line-height:25px;font-weight:bold;}
+.nav .minNav em{display:inline-block;line-height:25px;background:#C74451;padding-left:5px;padding-right:5px;margin:2px 1px 2px 1px;color:#fff;border-top-left-radius:3px;border-radius:3px;cursor:pointer;}
+.nav .minNav em:hover{background:#0a2833;}
+.nav .minNav a{display:inline-block;line-height:25px;background:#006843;padding-left:5px;padding-right:5px;margin:2px 1px 2px 1px;color:#fff;border-top-left-radius:3px;border-radius:3px;cursor:pointer;}
+.nav .minNav a:hover{background:#0a2833;}
+
+.navMark{height:0;overflow:hidden;font-size:0;line-height:0;visibility:hidden;width:500px;margin:0 auto;}
+.navFix{position:fixed;top:0;z-index: 999;}
+
+
+/*源代码样式*/
+.part{margin:10px;border:1px solid #d7d7d7;padding:10px;background:#fff;font-size:14px;font-family:'Lucida Grande', Verdana, Arial, Sans-Serif;word-break:break-all;}
+.part:hover{border:1px solid #ccc;box-shadow:0 0 10px #aaa;border-radius:5px;}
+/* 代码区域 */
+pre{display:block;margin:10px 0;padding:10px;background:whiteSmoke;color:#05a;border-left:5px solid #C74451;border-right:1px solid #ddd;border-top:1px solid #ddd;border-bottom:1px solid #ddd;white-space:pre-wrap;word-wrap:break-word;line-height:22px;font-family:'Lucida Grande',Verdana,Arial,Sans-Serif;}
+/* css & html 注释 */
+pre span.note{color:#888;font-size:12px;}
+
+
+
+.part .tit{line-height:40px;font-weight:bold;color:#C74451;font-size:24px;}
+.part p{line-height:1.6em;margin:5px 0;}
+.part strong{font-weight:bold;color:#05a;}
+.part strong:before{display:inline-block;content:"";width:10px;height:10px;background:#05a;margin-right:5px;border-radius:5px;overflow:hidden;}
+.part em{font-weight:bold;}
+.part .tip{font-size:12px;color:#888;}
+.part img{max-width:100%;}
+.part a{color:#C74451;font-size:12px;margin-right:20px;}
+.part a:hover{text-decoration:underline;}
+

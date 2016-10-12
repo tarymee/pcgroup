@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.dis-flex-wrap();
+]]></content>
+	<tabTrigger>le-dis-flex-wrap</tabTrigger>
+	<scope>source.less</scope>
+	<description>弹性布局 父元素</description>
+</snippet>

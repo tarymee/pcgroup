@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.transform(${1:rotate(0deg)} ${2:scale(1,1)} ${3:skew(0deg,0deg)} ${4:translate(0px,0px)} ${5:translate3d(0px,0px,0px)});
+]]></content>
+	<tabTrigger>le-transform</tabTrigger>
+	<scope>source.less</scope>
+	<description>变形</description>
+</snippet>

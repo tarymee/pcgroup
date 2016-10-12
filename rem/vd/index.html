@@ -1,0 +1,107 @@
+<!doctype HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta content="telephone=no" name="format-detection" />
+<title>vd【viewportWidth=designWidth】方案demo</title>
+<script type="text/javascript">
+!function(a){var b,c;/Android (\d+\.\d+)/.test(navigator.userAgent)?(b=parseFloat(RegExp.$1),b>2.3?(c=parseInt(window.screen.width)/a,document.write('<meta name="viewport" content="width='+a+",minimum-scale="+c+",maximum-scale="+c+', target-densitydpi=device-dpi">')):document.write('<meta name="viewport" content="width='+a+',target-densitydpi=device-dpi">')):document.write('<meta name="viewport" content="width='+a+',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')}(640);
+</script>
+<style>
+@charset "utf-8";
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,hr,thead,tbody,tfoot,th,td{margin:0;padding:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;font-size:32px;}
+body{line-height:1.5;font-size:16px;}
+body,button,input,select,textarea{font-family:'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+b,strong{font-weight:bold;}
+i,em{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+table th,table td{border:1px solid #ddd;padding:5px;}
+table th{font-weight:inherit;border-bottom-width:2px;border-bottom-color:#ccc;}
+img{border:0 none;width:auto\9;max-width:100%;vertical-align:top;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;vertical-align:baseline;}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+button[disabled],input[disabled]{cursor:default;}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+input{line-height:normal!important;}
+}
+select[size],select[multiple],select[size][multiple]{border:1px solid #AAA;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+audio,canvas,video,progress{display:inline-block;}
+
+
+.g-doc{width:640px;margin:0px auto;}
+
+/*图文列表 px*/
+.picList{overflow:hidden;}
+.picList-item{display:block;overflow:hidden;padding:20px;border-bottom:1px solid #999;}
+.picList-item-pic{float:left;width:200px;height:160px;margin-right:20px;}
+.picList-item-pic img{display:block;width:100%;height:100%;}
+.picList-item-tb{overflow:hidden;}
+.picList-item-tit{height:40px;line-height:40px;font-size:32px;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+.picList-item-des{font-size:24px;line-height:40px;max-height:80px;color:#999;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.picList-item-price{color:#f60;font-size:24px;line-height:40px;height:40px;overflow:hidden;}
+
+
+
+/*文字列表 px*/
+.list{margin:20px 0;}
+.list-item{display:block;height:80px;font-size:30px;line-height:80px;border-bottom:1px solid #999;padding:0 20px;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+
+
+/*图标列表 px写法*/
+.rate{width:100%;overflow:hidden;}
+.rate-item{width:20%;margin:20px 2.5%;text-align:center;float:left;line-height:50px;font-size:24px;}
+.rate-item:before{content:"";display:block;width:100px;height:100px;background-image:url(bg.png);-webkit-border-radius:50px;-moz-border-radius:50px;-ms-border-radius:50px;border-radius:50px;margin:0px auto;}
+.rate-item-1:before{background-position:0 0;}
+.rate-item-2:before{background-position:100px 0px;}
+.rate-item-3:before{background-position:0 100px;}
+.rate-item-4:before{background-position:100px 100px;}
+</style>
+</head>
+<body>
+<div class="g-doc">
+	<div class="list">
+		<a href="" class="list-item">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+	</div>
+	<div class="picList">
+		<a href="" class="picList-item">
+			<div class="picList-item-pic"><img src="http://temp.im/200x160" alt="" /></div>
+			<div class="picList-item-tb">
+				<div class="picList-item-tit">标题标题标题标题标题标题</div>
+				<div class="picList-item-des">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
+				<div class="picList-item-price">71.54元/斤</div>
+			</div>
+		</a>
+		<a href="" class="picList-item">
+			<div class="picList-item-pic"><img src="http://temp.im/200x160" alt="" /></div>
+			<div class="picList-item-tb">
+				<div class="picList-item-tit">标题标题标题题</div>
+				<div class="picList-item-des">描述描述描述</div>
+				<div class="picList-item-price">71.54元/斤</div>
+			</div>
+		</a>
+	</div>
+
+
+
+	<div class="rate">
+		<div class="rate-item rate-item-1">AAA</div>
+		<div class="rate-item rate-item-2">BBB</div>
+		<div class="rate-item rate-item-3">CCC</div>
+		<div class="rate-item rate-item-4">DDD</div>
+	</div>
+
+
+</div>
+</body>
+</html>

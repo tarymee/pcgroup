@@ -1,0 +1,369 @@
+//----------------------------
+// File : mixins.less v1.0
+// Author : Tary
+// Email : tarymee@gmail.com
+// Update : 2014-07-10 23:47:29
+// Description : CSS3 snippets
+//----------------------------
+@import "reset.less";
+@import "icon.less";
+
+// 弹性布局 Source:http://www.w3cplus.com/css3/using-flexbox.html
+// -------------------------
+// 弹性布局 父元素
+.dis-flex-wrap() {
+	display: -webkit-box;// OLD - iOS 6-, Safari 3.1-6
+	display: -moz-box;// OLD - Firefox 19- (doesn't work very well)
+	display: -webkit-flex;// NEW - Chrome
+	display: -ms-flexbox;// TWEENER - IE 10
+	display: flex;// NEW, Spec - Opera 12.1, Firefox 20+
+}
+// 弹性布局 子元素
+.dis-flex-item(@flex:1) {
+	-webkit-box-flex: @flex;
+	-moz-box-flex: @flex;
+	-webkit-flex: @flex;
+	-ms-flex: @flex;
+	flex: @flex;
+}
+// 弹性布局 子元素序号
+.dis-flex-order(@order:1) {
+	-webkit-box-ordinal-group: @order;
+	-moz-box-ordinal-group: @order;
+	-ms-flex-order: @order;
+	-webkit-order: @order;
+	order: @order;
+}
+
+// inline-block布局
+// (inline-block 前世今生) Source:http://ued.taobao.com/blog/2012/08/inline-block/ 
+// -------------------------
+// inline-block布局 父元素
+.dis-ib-wrap() {
+	font-size: 0;
+	// *word-spacing: -1px;//IE6/7
+	@media (-webkit-min-device-pixel-ratio:0) {
+		letter-spacing: -5px;//Safari 5- 等不支持 font-size: 0 的浏览器
+	}
+}
+// inline-block布局 子元素
+.dis-ib-item() {
+	display: inline-block;
+	// *display: inline;
+	// *zoom: 1;
+	vertical-align: top;
+	letter-spacing: normal;
+	word-spacing: normal;
+	line-height: initial;
+}
+
+
+// 未知高度垂直居中组件
+// 支持图片，单行或多行文字，以及图文混排
+// -------------------------
+// 父元素
+.valign-mid-wrap() {
+	font-size: 0;
+	// *word-spacing: -1px;
+	//IE6、7
+	height: 100%;
+	//继承父级高度
+	@media (-webkit-min-device-pixel-ratio:0) {
+		letter-spacing: -5px;
+		//Safari 5- 等不支持 font-size: 0 的浏览器
+	}
+	&::before {
+		content: "";
+		display: inline-block;
+		// *display: inline;
+		// *zoom: 1;
+		font-size: 0;
+		width: 0;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+// 子元素
+.valign-mid-item() {
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+	// *display: inline;
+	// *zoom: 1;
+	//font-size: 12px;
+	vertical-align: middle;//保证文字垂直居中
+	padding: 0 !important;//防止设置边距导致居中失效
+	margin: 0 !important;//width: 100%;
+	white-space: normal;//保证连续字符也能居中
+	word-wrap: break-word;//保证连续字符换行
+}
+
+
+// 未知高度垂直居中组件
+// 支持图片 div 不支持文字
+// -------------------------
+// 父元素
+.valign-mid-wrapA() {
+	position: relative;
+}
+// 子元素
+.valign-mid-itemA() {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+// Clearfix
+// -------------------------
+.clearfix() {
+	&:before {
+		content: "";
+		display: block;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Border radius
+// -------------------------
+.border-radius(@arguments:0) {
+	-webkit-border-radius: @arguments;
+	-moz-border-radius: @arguments;
+	border-radius: @arguments;
+}
+
+// Box shadow
+// -------------------------
+.box-shadow(@arguments:inset 0 0 1px #000) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+
+// text shadow default
+// -------------------------
+.text-shadow(@arguments:0 0 1px #000) {
+	text-shadow: @arguments;
+}
+
+// 文字溢出显示省略号
+// -------------------------
+.text-overflow() {
+	display: block;
+	white-space: nowrap;
+	word-wrap: normal;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+// 多行文本溢出显示省略号 仅webkit支持
+// Source:http://c7sky.com/text-overflow-ellipsis-on-multiline-text.html
+// -------------------------
+.line-overflow(@line:1) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: @line;
+	-webkit-box-orient: vertical;
+}
+
+// Force line breaks(强制换行)
+// -------------------------
+.word-break() {
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+// No wrap (强制不换行)
+// -------------------------
+.no-wrap() {
+	word-break: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+}
+
+// 缩进文字隐藏法
+// text-indent:-999em 存在性能问题：
+// Source:http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.hide-text-indent() {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// 字号0文字隐藏法
+// Source:https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+// -------------------------
+.hide-text-font() {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+// 裁剪方式隐藏元素
+// 1. IE6-8 有严重漏洞，请勿使用 Source:https://www.hkcert.org/my_url/zh/101104_ms_ie_css_tagparsing_vuln
+// 2. VoiceOver 无法读出宽高为 0 的元素
+.hide-clip() {
+	position: absolute !important;// clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);// 1
+	padding: 0 !important;
+	border: 0 none !important;
+	height: 1px !important;// 2
+	width: 1px !important;
+	overflow: hidden;
+}
+
+// Opacity(透明)
+// -------------------------
+.opacity(@opacity:0.5) {
+	opacity: @opacity;
+	-moz-opacity: @opacity;
+	@opacityIE: @opacity * 100;
+	filter:~"alpha(opacity=@{opacityIE})";
+}
+
+// Background clipping
+// -------------------------
+.background-clip(@arguments:border-box) {
+	-webkit-background-clip: @arguments;
+	-moz-background-clip: @arguments;
+	background-clip: @arguments;
+}
+
+// Background size
+// -------------------------
+.background-size(@arguments:auto) {
+	-webkit-background-size: @arguments;
+	-moz-background-size: @arguments;
+	-o-background-size: @arguments;
+	background-size: @arguments;
+}
+// Background origin
+// -------------------------
+.background-origin(@arguments:padding-box) {
+	-webkit-background-origin: @arguments;
+	-moz-background-origin: @arguments;
+	background-origin: @arguments;
+}
+
+// Alpha background-color (透明背景)
+// -------------------------
+.alpha-background(@rgb:#000,@alpha:.5) {
+	@rgba-color:fade(@rgb,@alpha*100);
+	@argb-color:argb(@rgba-color);
+	background-color: @rgba-color;
+	filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{argb-color}', endColorstr='@{argb-color}', GradientType=0)\9";
+	zoom: 1;
+}
+
+// Gradient(暂时只提供一种由上到下的渐变)
+// -------------------------
+.gradient(@start:#000000,@stop:#FFFFFF) {
+	background-color: @start;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+	background-image: -webkit-linear-gradient(top, @start, @stop);
+	background-image: linear-gradient(to bottom, @start, @stop);
+}
+
+// Controls the selection model of an element.(控制内容的可选择性)
+// Source:http://www.iefans.net/css3-shuxing-user-select-kongzhi-xuanze-fanwei/
+// -------------------------
+.user-select(@arguments:none) {
+	-webkit-user-select: @arguments;
+	-moz-user-select: @arguments;
+	-ms-user-select: @arguments;
+	user-select: @arguments;
+}
+
+// Appearance (元素外观样式)
+// Source:http://www.w3cplus.com/css3/changing-appearance-of-element-with-css3.html
+// -------------------------
+.appearance(@appearance:none) {
+	-webkit-appearance: @appearance;
+	-moz-appearance: @appearance;
+	appearance: @appearance;
+}
+
+// 隐藏select元素的下拉箭头
+// 1. 隐藏 WebKit 中的下拉箭头
+// 2. Firefox 存在bug，该属性不完全生效，
+// Source:https://bugzilla.mozilla.org/show_bug.cgi?id=649849
+// 3. 修复Firefox中的bug 实验数值，Firefox for Android text-indent 需要设置大于 5px 但设置之后样式位移较多
+// @doc:https://gist.github.com/joaocunha/6273016
+// @demo:http://jsbin.com/EdiZuvO/1/edit
+// 本方法不太推荐使用
+.select-no-appearance() {
+	-webkit-appearance: none;// 1
+	-moz-appearance: none;// 2
+	appearance: none;
+	text-overflow: "";// 3
+	text-indent: .01px;// 3
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+
+// Animation(动画)
+// IE10以下不支持
+// -------------------------
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	-ms-animation: @arguments;
+	animation: @arguments;
+}
+
+// transition(过渡)
+// IE10以下不支持
+// -------------------------
+.transition(@arguments:all 0.5s ease-in 0.5s) {
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-ms-transition: @arguments;
+	transition: @arguments;
+}
+
+// Transform(变形)
+// IE9(-ms-)以下不支持
+// -------------------------
+.transform(@arguments:rotate(0deg) scale(1,1) skew(0deg,0deg) translate(0px,0px) translate3d(0px,0px,0px)) {
+	-webkit-transform: @arguments;
+	-moz-transform: @arguments;
+	-ms-transform: @arguments;
+	transform: @arguments;
+}
+
+// CSS columns
+// -------------------------
+.columns(@colwidth:250px, @colcount:0, @colgap:50px, @columnRuleColor:#EEEEEE, @columnRuleStyle:solid, @columnRuleWidth:1px) {
+	-moz-column-width: @colwidth;
+	-moz-column-count: @colcount;
+	-moz-column-gap: @colgap;
+	-moz-column-rule-color: @columnRuleColor;
+	-moz-column-rule-style: @columnRuleStyle;
+	-moz-column-rule-width: @columnRuleWidth;
+	-webkit-column-width: @colwidth;
+	-webkit-column-count: @colcount;
+	-webkit-column-gap: @colgap;
+	-webkit-column-rule-color: @columnRuleColor;
+	-webkit-column-rule-style: @columnRuleStyle;
+	-webkit-column-rule-width: @columnRuleWidth;
+	column-width: @colwidth;
+	column-count: @colcount;
+	column-gap: @colgap;
+	column-rule-color: @columnRuleColor;
+	column-rule-style: @columnRuleStyle;
+	column-rule-width: @columnRuleWidth;
+}

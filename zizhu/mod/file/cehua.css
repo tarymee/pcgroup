@@ -1,0 +1,8 @@
+/*出品信息模块*/
+.m-chupin{height:100%;position:relative;}
+.m-chupin img{display:block;width:100%;}
+.m-chupin-tit{line-height:30px;font-size:20px;text-align:center;margin:20px 10px 0;}
+.m-chupin-text{overflow:hidden;}
+.m-chupin-text span{line-height:25px;float:left;width:45%;margin-left:5%;font-size:15px;}
+.m-chupin-ad{overflow:hidden;}
+.m-chupin-ad span{line-height:25px;float:left;width:90%;margin-left:5%;font-size:15px;}

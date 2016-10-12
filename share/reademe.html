@@ -1,0 +1,143 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><style id="custom-theme">body{font-size:16px;line-height:1.5em;color:#444;font-family:"helvetica neue",tahoma,"hiragino sans gb",stheiti,"wenquanyi micro hei",\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+body{margin:30px;}
+a{text-decoration:none;}
+p{margin:0 0 1em 0;}
+img{max-width:100%;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;line-height:1em;margin:1em 0 15px 0;}
+h4,h5,h6{font-weight:bold;}
+h1{font-size:2.5em;border-bottom:1px solid silver;padding-bottom:.3em;}
+h2{font-size:2em;border-bottom:1px solid silver;padding-bottom:.3em;}
+h3{font-size:1.5em;}
+h4{font-size:1.2em;}
+h5{font-size:1em;}
+h6{font-size:0.9em;}
+blockquote{color:#666666;margin:0;padding-left:1em;border-left:0.5em #EEE solid;}
+hr{display:block;height:2px;border:0;border-top:1px solid #aaa;border-bottom:1px solid #eee;margin:1em 0;padding:0;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+ul,ol{margin:1em 0;padding:0 0 0 2em;}
+li p:last-child{margin:0}
+dd{margin:0 0 0 2em;}
+img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;margin-bottom:1em;}
+td,th{padding:4px 10px;border:1px solid #bbb;}
+tr:nth-child(even) td,tr:nth-child(even) th{background:#eee;}
+
+pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;border:1px solid #CCC!important;background-color:#F8F8F8;color:#000;}
+pre code{display:block;line-height:1.5em;padding:10px;font-size:12px;font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+pre .decorator,pre .annotation{color:#000077;}
+pre .attribute{color:#070;}
+pre .value,pre .string,pre .scss .value .string{color:#d14;}
+pre .comment{color:#998;font-style:italic;}
+pre .function .title{color:#900;}
+pre .class{color:#458;}
+pre .id,pre .pseudo,pre .constant,pre .hexcolor{color:teal;}
+pre .variable{color:#336699;}
+pre .javadoc{color:#997700;}
+pre .pi,pre .doctype{color:#3344bb;}
+pre .number{color:#099;}
+pre .important{color:#f00;}
+pre .label{color:#970;}
+pre .preprocessor{color:#579;}
+pre .reserved,pre .keyword,pre .scss .value{color:#000;}
+pre .regexp{background-color:#fff0ff;color:#880088;}
+pre .symbol{color:#990073;}
+pre .symbol .string{color:#a60;}
+pre .tag{color:#007700;}
+pre .at_rule,pre .at_rule .keyword{color:#088;}
+pre .at_rule .preprocessor{color:#808;}
+pre .scss .tag,pre .scss .attribute{color:#339;}</style></head><body youdao="bind"><h1 id="wap-">WAP端百度分享</h1>
+<h2 id="-">先看一些资料，对百度分享有大概了解</h2>
+<ul>
+<li><a href="http://share.baidu.com/help/customization/config">百度分享1.0 API</a></li>
+<li><a href="http://share.baidu.com/code/advance">百度分享2.0 API</a></li>
+</ul>
+<p>1.0优缺点</p>
+<ul>
+<li>同个页面可以定义多个分享按钮 每个分享按钮可以有不同的链接</li>
+<li>可以定义 wbUid 参数 分享的时候自动@新浪用户</li>
+<li>修改样式只能用css覆盖的方式</li>
+<li>代码结构不简练 需要引入多个script标签</li>
+<li>1.0版本现在官网已经不更新维护了</li>
+</ul>
+<p>2.0优缺点：</p>
+<ul>
+<li>同个页面可以定义多个分享，但只能是同个链接</li>
+<li>没有1.0的 wbUid 参数，不能分享的时候自动@新浪用户</li>
+<li>可以通过 bdCustomStyle 参数自定义样式 1.0版本的只能覆盖</li>
+<li>官网主推2.0版本</li>
+</ul>
+<p>现在WAP端【新版】推荐统一用2.0版本，之前的做法是做成插件，现在不做成插件了，仅提供最基本的简单代码示例【需要更多功能请参考官网API或自行扩展】。</p>
+<pre><code class="lang-html"><span class="comment">&lt;!-- 
+HTML结构可以放在body的任意位置，可复制多份。 
+class＝"bdsharebuttonbox" 部分为dom选择器，请勿改动。
+data-tag属性为分享按钮标识，用于实现同一页面中多分享按钮不同配置，详见设置部分。
+data-cmd属性为分享目标标识，取值请参见：分享媒体id对应表。此外值为more时点击展现更多弹窗，值为count时展现分享数。
+--&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bdsharebuttonbox"</span> <span class="attribute">data-tag</span>=<span class="value">"share_1"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"bds_weixin"</span> <span class="attribute">data-cmd</span>=<span class="value">"weixin"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"bds_mshare"</span> <span class="attribute">data-cmd</span>=<span class="value">"mshare"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"bds_qzone"</span> <span class="attribute">data-cmd</span>=<span class="value">"qzone"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"bds_tsina"</span> <span class="attribute">data-cmd</span>=<span class="value">"tsina"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"bds_baidu"</span> <span class="attribute">data-cmd</span>=<span class="value">"baidu"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"bds_renren"</span> <span class="attribute">data-cmd</span>=<span class="value">"renren"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"bds_count"</span> <span class="attribute">data-cmd</span>=<span class="value">"count"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="comment">&lt;!-- 
+JS部分：
+一般放于页面底部，外链，方便修改
+可配合lazy.js实现按需加载
+ --&gt;</span>
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+window._bd_share_config = {
+    common : {
+        <span class="comment">//此处放置通用设置</span>
+        <span class="comment">// "bdText" : "自定义分享标题 留空或不写则为默认",</span>
+        <span class="comment">// "bdDesc" : "自定义分享摘要 留空或不写则为默认",</span>
+        <span class="comment">// "bdUrl" : "自定义分享url地址 留空或不写则为默认",</span>
+        <span class="comment">// "bdPic" : "自定义分享图片 留空或不写则为默认"</span>
+
+        <span class="comment">// bdSign: 是否进行回流统计 参数为</span>
+        <span class="comment">// on: 默认值，使用正常方式挂载回流签名（#[数字签名]）</span>
+        <span class="comment">// off: 关闭数字签名，不统计回流量</span>
+        <span class="comment">// normal: 使用&amp;符号连接数字签名，不破坏原始url中的#锚点</span>
+        bdSign : <span class="string">"normal"</span>,
+        <span class="comment">// bdSnsKey: 自定义分享平台的key 六网各不同 这里是以电脑网为例</span>
+        <span class="comment">// pconline 2953917903</span>
+        <span class="comment">// pcauto 3549659419</span>
+        <span class="comment">// pclady 1536120080</span>
+        <span class="comment">// pcbaby 3787104594</span>
+        <span class="comment">// pchouse 1207940458</span>
+        <span class="comment">// pcgames 736770245</span>
+        <span class="string">"bdSnsKey"</span>:{<span class="string">"tsina"</span>:<span class="string">"2953917903"</span>}
+    },
+    share : [{
+        <span class="string">"tag"</span> : <span class="string">"share_1"</span>,<span class="comment">//这里的值对应html的data-tag属性</span>
+        <span class="string">"bdCustomStyle"</span>:<span class="string">"xxx.css"</span><span class="comment">// 自定义样式地址 根据设计稿创建不同的样式文件来引用</span>
+    }]
+}
+<span class="keyword">with</span>(document)<span class="number">0</span>[(getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>]||body).appendChild(createElement(<span class="string">"script"</span>)).src=<span class="string">"http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion="</span>+~(-<span class="keyword">new</span> Date()/<span class="number">36e5</span>)];
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<h2 id="-">关于微信分享</h2>
+<p>百度的微信分享，点击是出现一个二维码给用户扫描分享，这在pc端是可以的，因为有手机可以扫，但在WAP端因为已经是手机上了，所以要换另一种方式，并且在UC浏览器中，UC有提供API支持一键分享到微信</p>
+<p>所以整个流程是这样的：</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> ua = navigator.userAgent.toLowerCase();
+<span class="keyword">if</span> (<span class="regexp">/UCBrowser/i</span>.test(ua)) {
+    <span class="keyword">if</span> (<span class="regexp">/(iPad|iPhone|iPod)/i</span>.test(ua)) {
+        alert(<span class="string">"ios"</span>);
+        ucbrowser.web_share(document.title, <span class="string">""</span>, location.href, <span class="string">"kWeixinFriend"</span>, <span class="string">""</span>, <span class="string">""</span>, <span class="string">""</span>);
+    } <span class="keyword">else</span> {
+        ucweb.startRequest(<span class="string">"shell.page_share"</span>, [document.title, <span class="string">""</span>, location.href, <span class="string">"WechatTimeline"</span>, <span class="string">""</span>, <span class="string">""</span>, <span class="string">""</span>]);
+    }
+}<span class="keyword">else</span> {
+    <span class="keyword">if</span> (<span class="regexp">/micromessenger/i</span>.test(ua)) {
+        alert(<span class="string">"请点击当前屏幕右上角按钮进行分享。"</span>);
+    } <span class="keyword">else</span> {
+        alert(<span class="string">"请通过微信搜索\"太平洋电脑网\"并添加为好友，通过微信分享精彩内容。"</span>);
+    }
+}
+</code></pre>
+<p><a href="http://www1.pconline.com.cn/wap/20151116/test/demo.html">一个具体的demo</a></p>
+</body></html>

@@ -1,0 +1,4 @@
+/*地址模块*/
+.m-address{height:100%;position:relative;}
+.m-address img{display:block;width:100%;}
+.m-address-text{margin:20px 10px 0;background:url(http://www1.pclady.com.cn/global/2015/h5/admin/zt/img/address.png) no-repeat 0px 0px;-webkit-background-size:30px;-moz-background-size:30px;-ms-background-size:30px;background-size:30px;line-height:30px;height:60px;padding-left:35px;font-size:18px;}

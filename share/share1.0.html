@@ -1,0 +1,113 @@
+<!doctype HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta content="telephone=no" name="format-detection" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no"/>
+<title>电脑网百度分享测试</title>
+<style>
+html,body{margin:0;padding:0;}
+html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;}
+body{line-height:1.5;}
+img{}
+
+.g-doc{margin:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;}
+
+
+.aaa{overflow: hidden;}
+
+.pic{overflow: hidden;}
+.pic img{float:left;width:80px;height:80px;margin:5px;padding:5px;border:1px solid #d7d7d7;}
+</style>
+
+</head>
+<body>
+<div class="g-doc">
+<div class="aaa">
+	<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+		<a class="bds_tsina"></a>
+		<a class="bds_tqq"></a>
+		<a class="bds_qzone"></a>
+		<span class="bds_more"></span>
+	</div>
+</div>
+
+<br />
+
+<div class="aaa">
+自定义分享链接 http://m.pcauto.com.cn/?fromPcautoApp&2454545#fffff
+</div>
+<div class="aaa">
+	<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" data="{'bdDes':'您的自定义分享摘要','text':'您的自定义分享内容','title':'您的自定义pop窗口标题','pic':'http://img0.pcauto.com.cn/pcauto/teach/tiyan/1511/APP_2.jpg','bdComment':'自定义分享评论','url':'http://m.pcauto.com.cn/?fromPcautoApp&2454545#fffff','wbuid':'2302292872'}">
+	<a class="bds_tsina"></a>
+	<a class="bds_tqq"></a>
+	<a class="bds_qzone"> </a>
+	<span class="bds_more"></span>
+	</div>
+</div>
+
+
+<div class="pic">
+<img src="http://img0w.pconline.com.cn/pconline/1511/15/spcgroup/width_640,qua_30/7175842_12PSD.jpg">
+<img src="http://img0w.pconline.com.cn/pconline/1511/13/spcgroup/width_640,qua_30/7175842_screenshot_2015-11-13-16-45-24.png">
+<img src="http://img0w.pconline.com.cn/pconline/1511/13/spcgroup/width_640,qua_30/7175842_screenshot_2015-11-13-16-45-55.png">
+<img src="http://img0w.pconline.com.cn/pconline/1511/13/spcgroup/width_640,qua_30/7175842_screenshot_2015-11-13-16-51-37.png">
+<img src="http://img0w.pconline.com.cn/pconline/1511/13/spcgroup/width_640,qua_30/7175842_screenshot_2015-11-13-17-25-43.png">
+</div>
+
+
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&mini=1" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+window.bds_config = {
+	"bdText": "#PConline手机触屏版#" + document.title.replace(/([^_]*)_?.*/, "$1"),
+
+	// review: 是否进行回流统计 参数为
+	// on: 默认值，使用正常方式挂载回流签名（#[数字签名]）
+	// off: 关闭数字签名，不统计回流量
+	// normal: 使用&符号连接数字签名，不破坏原始url中的#锚点
+	"review":"normal",
+
+	// wbUid 自动@用户 六网各不同
+	// pconline 2302292872
+	// pcauto 2298836177
+	// pclady 1746250183
+	// pcbaby 2301626242
+	// pchouse 1774281917
+	// pcgames 1661969105
+	"wbUid": "2302292872",
+
+	// snsKey 自定义分享平台的key 六网各不同
+	// pconline 2953917903
+	// pcauto 3549659419
+	// pclady 1536120080
+	// pcbaby 3787104594
+	// pchouse 1207940458
+	// pcgames 736770245
+	"snsKey": {"tsina": "2953917903"}
+};
+document.getElementById('bdshell_js').src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+
+// var bds_config = {
+// 	'bdDes':'您的自定义分享摘要',		//'请参考自定义分享摘要'
+// 	'bdText':'您的自定义分享内容',		//'请参考自定义分享内容'
+// 	'bdPopTitle':'您的自定义pop窗口标题',	//'请参考自定义pop窗口标题'
+// 	'bdTop':'您的自定义侧栏高度',		//'请参考自定义侧栏高度'
+// 	'bdComment':'您的自定义分享评论',	//'请参考自定义分享评论'
+// 	'bdPic':'您的自定义分享出去的图片',	//'请参考自定义分享出去的图片'
+// 	'searchPic':'是否自动抓取页面图片',//'0为抓取，1为不抓取，默认为0，目前只针对新浪微博'
+// 	'wbUid':'您的自定义微博 ID',		//'请参考自定义微博 id'
+// 	'render':false,				//'请参考自定义分享回流量统计'
+// 	//百度分享为了精准统计您页面分享出去的回流量，而采用在您的url地址后加入#[数字签名]，如果您的url地址中有其他#锚点，则需要进行如下配置以保证您的url回流访问时的正确性
+// 	// 'on': 默认值，使用正常方式挂载回流签名（#[数字签名]）
+// 	// 'off': 关闭数字签名，不统计回流量
+// 	// 'normal': 使用&符号连接数字签名，不破坏原始url中的#锚点
+// 	'review':'normal',			//'请参考自定义分享回流签名'
+// 	'snsKey':{'tsina':'appkey'}		//'请参考自定义分享到平台的appkey'
+// }
+
+</script>
+</body>
+</html>

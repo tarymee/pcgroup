@@ -1,0 +1,8 @@
+/*mask*/
+.m-mask-wrap{width:100%;height:100%;background:rgba(000,000,000,0.9) url(http://www1.pclady.com.cn/global/2015/h5/admin/zt/img/loadding.gif) no-repeat center center;position:relative;}
+.m-cover-bg{width:100%;height:100%;overflow:hidden;display:none;}
+.m-cover-mask{width:100%;height:100%;opacity:1;position:absolute;left:0;top:0;}
+.m-cover-hand{width:100%;height:100%;position:absolute;top:0px;left:0px;display:none;}
+.m-cover-hand img{width:140px;height:140px;position:absolute;top:50%;left:50%;margin-left:-70px;margin-top:-70px;}
+.m-cover-hand-tit{width:100%;font-size:18px;line-height:30px;position:absolute;bottom:60px;left:0px;text-align:center;}
+.m-cover-hand-tip{width:100%;font-size:14px;line-height:20px;position:absolute;bottom:40px;left:0px;text-align:center;}

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.text-overflow();
+]]></content>
+	<tabTrigger>le-text-overflow</tabTrigger>
+	<scope>source.less</scope>
+	<description>文字溢出省略号</description>
+</snippet>

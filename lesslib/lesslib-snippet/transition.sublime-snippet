@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.transition(${1:all} ${2:0.5s} ${3:linear | ease-in | ease-out | ease-in-out | cubic-bezier} ${4:0.5s});
+]]></content>
+	<tabTrigger>le-transition</tabTrigger>
+	<scope>source.less</scope>
+	<description>过渡</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.line-overflow(${1:1});
+]]></content>
+	<tabTrigger>le-line-overflow</tabTrigger>
+	<scope>source.less</scope>
+	<description>多行文字溢出显示省略号</description>
+</snippet>

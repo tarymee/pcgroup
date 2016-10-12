@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.hide-text-indent();
+]]></content>
+	<tabTrigger>le-hide-text-indent</tabTrigger>
+	<scope>source.less</scope>
+	<description>缩进文字隐藏法</description>
+</snippet>

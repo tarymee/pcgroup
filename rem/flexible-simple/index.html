@@ -1,0 +1,204 @@
+<!doctype HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta content="telephone=no" name="format-detection" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no"/>
+<title>lib.flexible 简化版</title>
+<script type="text/javascript">
+(function(f,j){var i=document,d=window;var b=i.documentElement;var c;var h=i.querySelector('meta[name="viewport"]');var e="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no";if(h){h.setAttribute("content",e)}else{h=i.createElement("meta");h.setAttribute("name","viewport");h.setAttribute("content",e);if(b.firstElementChild){b.firstElementChild.appendChild(h)}else{var a=i.createElement("div");a.appendChild(h);i.write(a.innerHTML)}}function g(){var k=b.getBoundingClientRect().width;if(!j){j=540}if(k>j){k=j}var l=k*100/f;b.style.fontSize=l+"px"}g();d.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(g,300)},false);d.addEventListener("pageshow",function(k){if(k.persisted){clearTimeout(c);c=setTimeout(g,300)}},false);if(i.readyState==="complete"){i.body.style.fontSize="16px"}else{i.addEventListener("DOMContentLoaded",function(k){i.body.style.fontSize="16px"},false)}})(640,750);
+</script>
+<style>
+/*
+需要注意的是：
+样式的reset中需先设置html字体的初始化大小为50px，这是为了防止js被禁用或者加载不到或者执行错误而做的兼容
+样式的reset中需先设置body字体的初始化大小为16px，这是为了让body内的字体大小不继承父级html元素的50px，而用系统默认的16px
+*/
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,hr,thead,tbody,tfoot,th,td{margin:0;padding:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;font-size:50px;}
+body{line-height:1.5;font-size:16px;}
+body,button,input,select,textarea{font-family:'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+b,strong{font-weight:bold;}
+i,em{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+table th,table td{border:1px solid #ddd;padding:5px;}
+table th{font-weight:inherit;border-bottom-width:2px;border-bottom-color:#ccc;}
+img{border:0 none;width:auto\9;max-width:100%;vertical-align:top;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;vertical-align:baseline;}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+button[disabled],input[disabled]{cursor:default;}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+input{line-height:normal!important;}
+}
+select[size],select[multiple],select[size][multiple]{border:1px solid #AAA;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+audio,canvas,video,progress{display:inline-block;}
+
+
+.g-doc{width:6.4rem;margin:0px auto;}
+
+/*图文列表 rem*/
+.picList{overflow:hidden;}
+.picList-item{display:block;overflow:hidden;padding:0.2rem;border-bottom:1px solid #999;}
+.picList-item-pic{float:left;width:2rem;height:1.6rem;margin-right:0.2rem;}
+.picList-item-pic img{display:block;width:100%;height:100%;}
+.picList-item-tb{overflow:hidden;}
+.picList-item-tit{height:0.4rem;line-height:0.4rem;font-size:0.32rem;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+.picList-item-des{font-size:0.24rem;line-height:0.4rem;height:0.8rem;color:#999;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.picList-item-price{color:#f60;font-size:0.24rem;line-height:0.4rem;height:0.4rem;overflow:hidden;}
+
+/*图文列表 px*/
+.picListpx{overflow:hidden;}
+.picListpx-item{display:block;overflow:hidden;padding:10px;border-bottom:1px solid #999;}
+.picListpx-item-pic{float:left;width:100px;height:80px;margin-right:10px;}
+.picListpx-item-pic img{display:block;width:100%;height:100%;}
+.picListpx-item-tb{overflow:hidden;}
+.picListpx-item-tit{height:20px;line-height:20px;font-size:16px;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+.picListpx-item-des{font-size:12px;line-height:20px;height:40px;color:#999;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.picListpx-item-price{color:#f60;font-size:12px;line-height:20px;height:20px;overflow:hidden;}
+
+
+/*文字列表 rem*/
+.list{}
+.list-item{display:block;height:0.8rem;font-size:0.3rem;line-height:0.8rem;border-bottom:1px solid #999;padding:0 0.2rem;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+
+/*文字列表 px*/
+.listpx{}
+.listpx-item{display:block;height:40px;font-size:15px;line-height:40px;border-bottom:1px solid #999;padding:0 10px;white-space:nowrap;word-wrap:normal;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+
+
+
+/*图标列表 rem写法*/
+.rate{width:6.4rem;overflow:hidden;}
+.rate-item{width:1.28rem;margin:0.2rem 0.16rem;text-align:center;float:left;line-height:0.5rem;font-size:0.24rem;}
+.rate-item:before{content:"";display:block;width:1.28rem;height:1.28rem;background-image:url(bg.png);-webkit-background-size:2.56rem;-moz-background-size:2.56rem;background-size:2.56rem;-webkit-border-radius:0.64rem;-moz-border-radius:0.64rem;-ms-border-radius:0.64rem;border-radius:0.64rem;}
+.rate-item-1:before{background-position:0 0;}
+.rate-item-2:before{background-position:1.28rem 0px;}
+.rate-item-3:before{background-position:0 1.28rem;}
+.rate-item-4:before{background-position:1.28rem 1.28rem;}
+
+/*图标列表 px写法*/
+.ratepx{width:100%;overflow:hidden;}
+.ratepx-item{width:20%;margin:10px 2.5%;text-align:center;float:left;line-height:25px;font-size:12px;}
+.ratepx-item:before{content:"";display:block;width:64px;height:64px;background-image:url(bg.png);-webkit-background-size:128px;-moz-background-size:128px;background-size:128px;-webkit-border-radius:32px;-moz-border-radius:32px;-ms-border-radius:32px;border-radius:32px;margin:0px auto;}
+.ratepx-item-1:before{background-position:0 0;}
+.ratepx-item-2:before{background-position:64px 0px;}
+.ratepx-item-3:before{background-position:0 64px;}
+.ratepx-item-4:before{background-position:64px 64px;}
+
+
+
+/*正方形*/
+.square{overflow: hidden;width:6.4rem;}
+.square-item{width:1.6rem;height:1.6rem;float:left;}
+.bg-1{background-color:#4285F4;}
+.bg-2{background-color:#EA4335;}
+.bg-3{background-color:#FBBC05;}
+.bg-4{background-color:#673AB7;}
+
+
+
+.tip{font-size:0.28rem;line-height:0.8rem;background-color:#34A853;color:#ffffff;}
+</style>
+</head>
+<body>
+<div class="g-doc">
+
+	<div class="tip">用rem的方式写百分比：宽高占25%的正方形</div>
+	<div class="square">
+	<div class="square-item bg-1"></div>
+	<div class="square-item bg-2"></div>
+	<div class="square-item bg-3"></div>
+	<div class="square-item bg-4"></div>
+	</div>
+
+
+	<div class="tip">新闻列表rem写法</div>
+	<!-- rem写法 -->
+	<div class="list">
+		<a href="" class="list-item">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+		<a href="" class="list-item">新闻标题新闻标题</a>
+	</div>
+	<div class="tip">新闻列表px写法</div>
+	<!-- px写法 -->
+	<div class="listpx">
+		<a href="" class="listpx-item">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
+		<a href="" class="listpx-item">新闻标题新闻标题</a>
+		<a href="" class="listpx-item">新闻标题新闻标题</a>
+		<a href="" class="listpx-item">新闻标题新闻标题</a>
+		<a href="" class="listpx-item">新闻标题新闻标题</a>
+	</div>
+
+	<div class="tip">图文列表rem写法</div>
+	<!-- rem写法 -->
+	<div class="picList">
+		<a href="" class="picList-item">
+			<div class="picList-item-pic"><img src="http://temp.im/200x160" alt="" /></div>
+			<div class="picList-item-tb">
+				<div class="picList-item-tit">标题标题标题标题标题标题</div>
+				<div class="picList-item-des">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
+				<div class="picList-item-price">71.54元/斤</div>
+			</div>
+		</a>
+		<a href="" class="picList-item">
+			<div class="picList-item-pic"><img src="http://temp.im/200x160" alt="" /></div>
+			<div class="picList-item-tb">
+				<div class="picList-item-tit">标题标题标题题</div>
+				<div class="picList-item-des">描述描述描述</div>
+				<div class="picList-item-price">71.54元/斤</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="tip">图文列表px写法</div>
+	<!-- px写法 -->
+	<div class="picListpx">
+		<a href="" class="picListpx-item">
+			<div class="picListpx-item-pic"><img src="http://temp.im/200x160" alt="" /></div>
+			<div class="picListpx-item-tb">
+				<div class="picListpx-item-tit">标题标题标题标题标题标题</div>
+				<div class="picListpx-item-des">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</div>
+				<div class="picListpx-item-price">71.54元/斤</div>
+			</div>
+		</a>
+		<a href="" class="picListpx-item">
+			<div class="picListpx-item-pic"><img src="http://temp.im/200x160" alt="" /></div>
+			<div class="picListpx-item-tb">
+				<div class="picListpx-item-tit">标题标题标题题</div>
+				<div class="picListpx-item-des">描述描述描述</div>
+				<div class="picListpx-item-price">71.54元/斤</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="tip">图标列表rem写法</div>
+	<!-- rem写法 -->
+	<div class="rate">
+		<div class="rate-item rate-item-1">AAA</div>
+		<div class="rate-item rate-item-2">BBB</div>
+		<div class="rate-item rate-item-3">CCC</div>
+		<div class="rate-item rate-item-4">DDD</div>
+	</div>
+
+	<div class="tip">图标列表px写法</div>
+	<!-- px写法 -->
+	<div class="ratepx">
+		<div class="ratepx-item ratepx-item-1">AAA</div>
+		<div class="ratepx-item ratepx-item-2">BBB</div>
+		<div class="ratepx-item ratepx-item-3">CCC</div>
+		<div class="ratepx-item ratepx-item-4">DDD</div>
+	</div>
+
+
+
+</div>
+</body>
+</html>

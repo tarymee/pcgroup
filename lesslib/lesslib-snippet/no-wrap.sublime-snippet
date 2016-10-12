@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+.no-wrap();
+]]></content>
+	<tabTrigger>le-no-wrap</tabTrigger>
+	<scope>source.less</scope>
+	<description>强制不换行</description>
+</snippet>
