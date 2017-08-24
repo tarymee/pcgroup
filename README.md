@@ -1,4 +1,4 @@
-# 太平洋网络pcgroup的工作
+# pcgroup work
 
 + 【deviceJump】全站设备判断跳转
 + 【speed】WAP端网速优化方案
